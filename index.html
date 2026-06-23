@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pirineo Aragonés con Greta · Guía del viaje · 1–16 julio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bosque:#2f4a32;--bosque-claro:#5a7d52;--piedra:#e8e2d4;--piedra-osc:#d6cdb8;
+  --agua:#3d7a8c;--ambar:#c08a2d;--tinta:#23291f;--tinta-suave:#5b6151;
+  --crema:#f6f3ea;--blanco:#fffefb;--linea:rgba(35,41,31,0.12);
+  --sombra:0 1px 3px rgba(35,41,31,0.08),0 6px 24px rgba(35,41,31,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
+.eyebrow{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambar)}
+a{color:var(--agua);text-decoration:none}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem;background:linear-gradient(170deg,#2f4a32 0%,#27384a 55%,#3a4150 100%);overflow:hidden}
+.hero-mountains{position:absolute;inset:0;width:100%;height:100%;opacity:0.85}
+.hero-content{position:relative;max-width:760px;z-index:2}
+.hero .eyebrow{color:#e9c97a}
+.hero h1{font-size:clamp(2.6rem,8vw,5.5rem);color:var(--crema);margin:1rem 0;letter-spacing:-0.01em}
+.hero h1 em{font-style:italic;color:#e9c97a;font-weight:400}
+.hero-sub{font-size:clamp(1.05rem,2.4vw,1.4rem);color:rgba(246,243,234,0.92);max-width:48ch;margin:0 auto;font-weight:400}
+.greta-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(246,243,234,0.14);border:1px solid rgba(233,201,122,0.4);color:#e9c97a;padding:0.5rem 1.1rem;border-radius:100px;font-size:0.9rem;font-weight:500;margin-top:2rem;backdrop-filter:blur(4px)}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem 2.5rem;margin-top:2.5rem;padding-top:1.8rem;border-top:1px solid rgba(233,201,122,0.35)}
+.hero-meta div{color:var(--crema)}
+.hero-meta .k{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(233,201,122,0.9);display:block;margin-bottom:0.15rem}
+.hero-meta .v{font-family:'Fraunces',serif;font-size:1.1rem}
+.scroll-hint{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(246,243,234,0.6);font-size:0.78rem;letter-spacing:0.1em;z-index:2;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+
+/* ---------- INTRO ---------- */
+.intro{padding:4.5rem 0 1rem;text-align:center}
+.intro h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--bosque);max-width:20ch;margin:0.5rem auto 1.5rem}
+.intro p{color:var(--tinta-suave);font-size:1.08rem;max-width:60ch;margin:0 auto 1.1rem}
+.intro .esencia{font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--bosque);margin-top:1.8rem;line-height:1.4}
+
+/* ---------- MAPA GENERAL ---------- */
+.mapa-seccion{padding:3rem 0}
+.mapa-wrap{border-radius:20px;overflow:hidden;border:1px solid var(--linea);box-shadow:var(--sombra)}
+.mapa{height:460px;width:100%}
+.mapa-cap{font-size:0.85rem;color:var(--tinta-suave);padding:0.9rem 1.2rem;background:var(--blanco);border-top:1px solid var(--linea);text-align:center}
+
+/* ---------- CAMPOS BASE ---------- */
+.bases{padding:2rem 0 4rem}
+.bases-titulo{text-align:center;margin-bottom:2.5rem}
+.bases-titulo h2{font-size:clamp(1.6rem,3.5vw,2.3rem);color:var(--bosque)}
+.base-card{
+  display:grid;grid-template-columns:auto 1fr auto;gap:1.5rem;align-items:center;
+  background:var(--blanco);border:1px solid var(--linea);border-radius:18px;
+  padding:1.6rem 1.8rem;margin-bottom:1.3rem;box-shadow:var(--sombra);
+  transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit;
+}
+.base-card:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(35,41,31,0.1),0 12px 32px rgba(35,41,31,0.1);text-decoration:none}
+.base-num{font-family:'Fraunces',serif;font-size:3rem;font-weight:600;line-height:1;width:80px;height:80px;display:flex;align-items:center;justify-content:center;border-radius:16px;color:var(--crema)}
+.base-card.b1 .base-num{background:linear-gradient(135deg,#2f4a32,#4a6b44)}
+.base-card.b2 .base-num{background:linear-gradient(135deg,#27384a,#3a5b5c)}
+.base-card.b3 .base-num{background:linear-gradient(135deg,#3a4150,#525a68)}
+.base-info{min-width:0}
+.base-info .eyebrow{display:block;margin-bottom:0.3rem}
+.base-info h3{font-size:1.5rem;color:var(--bosque);font-style:italic;font-weight:400;margin-bottom:0.3rem}
+.base-info .lugar{font-size:0.92rem;color:var(--tinta-suave);margin-bottom:0.5rem}
+.base-info .highlights{font-size:0.88rem;color:var(--tinta)}
+.base-info .highlights span{display:inline-block;background:var(--crema);border:1px solid var(--linea);border-radius:100px;padding:0.15rem 0.6rem;margin:0.15rem 0.2rem 0.15rem 0}
+.base-cta{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:0.3rem;color:var(--ambar);font-weight:600;font-size:0.85rem;white-space:nowrap}
+.base-cta .arrow{font-size:1.4rem;line-height:1}
+.base-fechas{font-family:'Fraunces',serif;font-size:0.95rem;color:var(--tinta-suave)}
+
+/* ---------- RESUMEN VIAJE ---------- */
+.resumen{background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:3.5rem 0}
+.resumen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;text-align:center}
+.resumen-item .num{font-family:'Fraunces',serif;font-size:2.8rem;color:var(--bosque);font-weight:600;line-height:1}
+.resumen-item .lbl{font-size:0.82rem;color:var(--tinta-suave);letter-spacing:0.04em;margin-top:0.4rem}
+
+/* ---------- GRETA / PET ---------- */
+.greta-seccion{padding:4rem 0}
+.greta-box{background:#f0ede0;border:1px solid var(--piedra-osc);border-radius:18px;padding:2rem 2.2rem;max-width:760px;margin:0 auto}
+.greta-box h2{font-size:1.5rem;color:var(--bosque);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.greta-box ul{list-style:none;display:grid;gap:0.8rem}
+.greta-box li{padding-left:1.6rem;position:relative;color:var(--tinta-suave);font-size:0.98rem}
+.greta-box li::before{content:'🐾';position:absolute;left:0;top:0}
+.greta-box li strong{color:var(--tinta)}
+
+/* ---------- VERIFICAR ---------- */
+.verificar{padding:1rem 0 4rem}
+.verificar-box{background:#fbf3e0;border:1px solid var(--ambar);border-radius:18px;padding:1.8rem 2.2rem;max-width:760px;margin:0 auto}
+.verificar-box h2{font-size:1.2rem;color:#9a6a14;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.verificar-box ul{list-style:none;display:grid;gap:0.6rem}
+.verificar-box li{padding-left:1.5rem;position:relative;color:var(--tinta-suave);font-size:0.93rem}
+.verificar-box li::before{content:'☐';position:absolute;left:0;color:var(--ambar);font-size:1.1rem}
+
+/* ---------- FOOTER ---------- */
+.foot{background:var(--bosque);color:var(--crema);padding:3rem 1.5rem;text-align:center}
+.foot p{color:rgba(246,243,234,0.85);max-width:50ch;margin:0 auto 0.6rem}
+.foot .ruta{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--crema);margin:0.5rem auto}
+
+@media(max-width:680px){
+  .base-card{grid-template-columns:auto 1fr;gap:1rem;padding:1.3rem}
+  .base-cta{grid-column:1/-1;flex-direction:row;justify-content:space-between;border-top:1px solid var(--linea);padding-top:0.8rem;margin-top:0.3rem}
+  .base-num{width:60px;height:60px;font-size:2.2rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+<svg class="hero-mountains" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path d="M0 900 L0 460 L180 320 L360 440 L520 280 L700 420 L880 260 L1080 400 L1260 300 L1440 420 L1440 900 Z" fill="#243a26" opacity="0.5"/>
+  <path d="M0 900 L0 560 L220 420 L420 520 L640 380 L860 500 L1080 400 L1300 500 L1440 440 L1440 900 Z" fill="#1c2e1e" opacity="0.7"/>
+  <path d="M0 900 L0 660 L260 580 L520 640 L780 560 L1040 630 L1300 580 L1440 620 L1440 900 Z" fill="#15231680" opacity="0.85"/>
+  <path d="M500 280 L520 280 L540 308 L560 292 L530 340 L508 322 L488 342 Z" fill="#f6f3ea" opacity="0.8"/>
+  <path d="M860 260 L880 260 L900 290 L920 272 L890 322 L868 304 L848 324 Z" fill="#f6f3ea" opacity="0.8"/>
+</svg>
+<div class="hero-content">
+  <span class="eyebrow">Guía de viaje · Pirineo Aragonés</span>
+  <h1>16 días entre <em>montañas</em></h1>
+  <p class="hero-sub">De los valles callados de Hecho a los tresmiles de Benasque. Tres campos base, un río que siempre acompaña, y Greta en cada paso.</p>
+  <div class="greta-badge">🐾 Una guía pensada para viajar con Greta</div>
+  <div class="hero-meta">
+    <div><span class="k">Fechas</span><span class="v">1–16 julio 2026</span></div>
+    <div><span class="k">Viajeros</span><span class="v">Carles, Anna y Greta</span></div>
+    <div><span class="k">Recorrido</span><span class="v">Oeste → Este</span></div>
+  </div>
+</div>
+<span class="scroll-hint">↓ EL VIAJE</span>
+</header>
+
+<!-- ===================== INTRO ===================== -->
+<section class="intro wrap">
+<span class="eyebrow">El plan</span>
+<h2>Un Pirineo a ritmo lento</h2>
+<p>Dieciséis días recorriendo el Pirineo aragonés de oeste a este, sin prisa y sin agendas apretadas. Tres bases estratégicas, cada una en un valle distinto, para descubrir bosques de hayas, ibones glaciares, pueblos de piedra y los picos más altos de la cordillera, siempre con senderismo suave y la mirada puesta en disfrutar, no en "verlo todo".</p>
+<p>Y con una regla que lo marca todo: cada ruta, cada terraza, cada parada está pensada para que Greta venga con vosotros.</p>
+<p class="esencia">Tres valles, un río que cambia de nombre, y un perro que ya es de montaña.</p>
+</section>
+
+<!-- ===================== CAMPOS BASE ===================== -->
+<section class="bases wrap">
+<div class="bases-titulo">
+  <span class="eyebrow">Los tres campos base</span>
+  <h2>Elige dónde empezar</h2>
+</div>
+
+<a class="base-card b1" href="campo-base-1-valle-de-hecho.html">
+  <div class="base-num">01</div>
+  <div class="base-info">
+    <span class="eyebrow">1–6 julio · 5 noches</span>
+    <h3>Valle de Hecho</h3>
+    <p class="lugar">Hotel de Montaña Usón · Valles Occidentales</p>
+    <div class="highlights"><span>Selva de Oza</span><span>Aguas Tuertas</span><span>Ansó</span><span>Cervecería propia</span></div>
+  </div>
+  <div class="base-cta"><span class="base-fechas">5 días</span><span class="arrow">→</span>Ver guía</div>
+</a>
+
+<a class="base-card b2" href="campo-base-2-broto.html">
+  <div class="base-num">02</div>
+  <div class="base-info">
+    <span class="eyebrow">6–11 julio · 5 noches</span>
+    <h3>Broto y Ordesa</h3>
+    <p class="lugar">Casa Rincón de Broto · Puerta de Ordesa</p>
+    <div class="highlights"><span>Bujaruelo</span><span>Torla</span><span>Aínsa</span><span>Valle de Otal</span></div>
+  </div>
+  <div class="base-cta"><span class="base-fechas">5 días</span><span class="arrow">→</span>Ver guía</div>
+</a>
+
+<a class="base-card b3" href="campo-base-3-benasque.html">
+  <div class="base-num">03</div>
+  <div class="base-info">
+    <span class="eyebrow">11–16 julio · 5 noches</span>
+    <h3>Benasque y el Aneto</h3>
+    <p class="lugar">La Terraceta de Linsoles · Posets-Maladeta</p>
+    <div class="highlights"><span>Valle de Estós</span><span>Aigualluts</span><span>Anciles</span><span>Pie del Aneto</span></div>
+  </div>
+  <div class="base-cta"><span class="base-fechas">6 días</span><span class="arrow">→</span>Ver guía</div>
+</a>
+</section>
+
+<!-- ===================== RESUMEN ===================== -->
+<section class="resumen">
+<div class="wrap resumen-grid">
+  <div class="resumen-item"><div class="num">16</div><div class="lbl">días de viaje</div></div>
+  <div class="resumen-item"><div class="num">3</div><div class="lbl">campos base</div></div>
+  <div class="resumen-item"><div class="num">3</div><div class="lbl">valles del Pirineo</div></div>
+  <div class="resumen-item"><div class="num">∞</div><div class="lbl">paseos con Greta</div></div>
+</div>
+</section>
+
+<!-- ===================== GRETA ===================== -->
+<section class="greta-seccion wrap">
+<div class="greta-box">
+  <h2>🐾 Viajar con Greta: lo esencial</h2>
+  <ul>
+    <li><strong>Correa siempre en los parques.</strong> En Valles Occidentales, Ordesa y Posets-Maladeta es obligatoria por ganado y fauna. En Bujaruelo y fuera de los parques puede ir suelta con cabeza.</li>
+    <li><strong>Ordesa, el matiz clave.</strong> En julio se entra en autobús que NO admite perros: por eso el plan gira hacia Bujaruelo y Torla.</li>
+    <li><strong>Benasque, buena noticia.</strong> Aquí el autobús lanzadera SÍ admite perros (en transportín), así que Aigualluts es viable.</li>
+    <li><strong>Calor de julio.</strong> Salidas temprano, agua y bebedero plegable siempre, y cuidado con el suelo caliente en las patas.</li>
+    <li><strong>Mastines de guarda.</strong> En los tres valles hay rebaños: si aparece un mastín, calma, coger a Greta en brazos y bordear el rebaño.</li>
+  </ul>
+</div>
+</section>
+
+<!-- ===================== VERIFICAR ===================== -->
+<section class="verificar wrap">
+<div class="verificar-box">
+  <h2>⚠️ Pendiente de confirmar antes de salir</h2>
+  <ul>
+    <li>Política de perros de los tres alojamientos (Usón, Casa Rincón de Broto, La Terraceta de Linsoles).</li>
+    <li>Reservas de restaurantes en julio (Casa Blasquico en Hecho es imprescindible reservar) y su política con perros.</li>
+    <li>Horarios y tarifa 2026 del autobús lanzadera de Benasque, y confirmación de que admite perros (AVANZA · 638 073 498).</li>
+    <li>Estado y tasa de la pista de Bujaruelo y del acceso a Ordesa para las fechas exactas.</li>
+    <li>Veterinario más cercano a cada base (Jaca para Hecho; Sobrarbe para Broto; Benasque para el valle).</li>
+  </ul>
+</div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <span class="eyebrow" style="color:#e9c97a">Pirineo Aragonés · 1–16 julio 2026</span>
+  <p class="ruta">Hecho · Broto · Benasque</p>
+  <p>Una guía hecha a medida para recorrer el Pirineo aragonés sin prisa, valle a valle, con Greta en cada paso del camino.</p>
+  <p style="font-size:0.82rem;opacity:0.7;margin-top:1.5rem">Guía personal de viaje · Carles, Anna y Greta 🐾</p>
+</footer>
+
+</body>
+</html>
