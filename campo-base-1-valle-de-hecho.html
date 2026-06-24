@@ -221,6 +221,43 @@ a:hover{text-decoration:underline}
 .wikiloc-link .txt b{color:var(--bosque);font-weight:600}
 .wikiloc-link .go{flex:0 0 auto;font-size:0.78rem;color:var(--ambar);font-weight:600;white-space:nowrap}
 .wikiloc-nota{font-size:0.82rem;color:var(--tinta-suave);padding:0 0.3rem;margin-top:0.2rem}
+/* ---------- RESUMEN DEL CAMPO BASE ---------- */
+.resumen{padding:1rem 0 0}
+.resumen-head{text-align:center;margin-bottom:2rem}
+.resumen-head .eyebrow{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ambar);font-weight:600}
+.resumen-head h2{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--bosque);font-weight:500;margin-top:0.4rem}
+.resumen-head p{color:var(--tinta-suave);max-width:640px;margin:0.6rem auto 0}
+.bloque-res{margin:2.5rem 0}
+.bloque-res > h3{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--bosque);font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--piedra-osc)}
+.tabla-rutas{display:grid;gap:0.7rem}
+.ruta-row{display:grid;grid-template-columns:auto 1fr auto;gap:0.9rem;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.ruta-row .dia-badge{background:var(--bosque);color:var(--crema);font-size:0.72rem;font-weight:600;border-radius:7px;padding:0.3rem 0.55rem;white-space:nowrap}
+.ruta-row .info .nom{font-weight:600;color:var(--bosque);font-size:0.98rem}
+.ruta-row .info .meta{font-size:0.83rem;color:var(--tinta-suave);margin-top:0.15rem}
+.ruta-row .pet{font-size:0.78rem;font-weight:600;padding:0.25rem 0.6rem;border-radius:100px;white-space:nowrap}
+.pet.ok{background:#e6efe2;color:#3a6b34}
+.pet.correa{background:#fbf3e0;color:#9a6a14}
+.comer-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.comer-card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.comer-card .nom{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--bosque)}
+.comer-card .ubi{font-size:0.8rem;color:var(--ambar);font-weight:600;margin:0.1rem 0 0.5rem}
+.comer-card .desc{font-size:0.88rem;color:var(--tinta-suave);margin-bottom:0.5rem}
+.comer-card .datos{font-size:0.82rem;color:var(--tinta);display:flex;flex-wrap:wrap;gap:0.4rem 0.9rem;align-items:center}
+.comer-card .tag{font-size:0.74rem;font-weight:600;padding:0.2rem 0.55rem;border-radius:100px}
+.comer-card .tag.si{background:#e6efe2;color:#3a6b34}
+.comer-card .tag.consultar{background:#fbf3e0;color:#9a6a14}
+.comer-card .tel{font-family:'Inter';font-weight:600}
+.visitas-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.visita-card{display:flex;gap:0.8rem;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.visita-card .emo{font-size:1.4rem;flex:0 0 auto}
+.visita-card .nom{font-weight:600;color:var(--bosque);font-size:0.96rem}
+.visita-card .desc{font-size:0.85rem;color:var(--tinta-suave);margin-top:0.15rem}
+.consejos-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.consejo-card{background:var(--blanco);border:1px solid var(--linea);border-left:3px solid var(--ambar);border-radius:10px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.consejo-card .tit{font-weight:600;color:var(--bosque);font-size:0.92rem;display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem}
+.consejo-card .txt{font-size:0.86rem;color:var(--tinta-suave)}
+@media(max-width:640px){.comer-grid,.visitas-grid,.consejos-grid{grid-template-columns:1fr}.ruta-row{grid-template-columns:auto 1fr}.ruta-row .pet{grid-column:2;justify-self:start}}
+
 
 /* ---------- NAV ENTRE CAMPOS BASE ---------- */
 .cbnav{background:var(--bosque);color:var(--crema);font-size:0.85rem}
@@ -352,6 +389,7 @@ a:hover{text-decoration:underline}
   <a href="#dia4">Día 4 · Pueblos</a>
   <a href="#dia5">Día 5 · Calzada romana</a>
   <a href="#dia6">Día 6 · Traslado</a>
+  <a href="#resumen">📋 Resumen</a>
   <a href="#veterinarios">🏥 Vets</a>
 </div>
 </nav>
@@ -1025,6 +1063,104 @@ a:hover{text-decoration:underline}
 </div>
 </section>
 
+<!-- ===================== RESUMEN DEL CAMPO BASE ===================== -->
+<section class="resumen wrap" id="resumen">
+<div class="resumen-head">
+  <span class="eyebrow">Vista de conjunto · Valle de Hecho</span>
+  <h2>Resumen práctico del campo base</h2>
+  <p>Todo lo esencial de estos seis días reunido para consultar de un vistazo: las rutas, dónde comer, qué visitar y los consejos clave para moverse por el valle con Greta.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🥾 Rutas de senderismo (resumen pet-friendly)</h3>
+  <div class="tabla-rutas">
+    <div class="ruta-row">
+      <span class="dia-badge">Día 2</span>
+      <div class="info"><div class="nom">Selva de Oza · Corona de los Muertos</div><div class="meta">Circular · ~5 km · fácil · hayedo con sombra y crómlech megalítico</div></div>
+      <span class="pet correa">🐾 Con correa</span>
+    </div>
+    <div class="ruta-row">
+      <span class="dia-badge">Día 3</span>
+      <div class="info"><div class="nom">Valle de Aguas Tuertas</div><div class="meta">Ida y vuelta desde Guarrinza · ~6 km · +200 m · pradera glaciar con meandros</div></div>
+      <span class="pet correa">🐾 Con correa</span>
+    </div>
+    <div class="ruta-row">
+      <span class="dia-badge">Día 5</span>
+      <div class="info"><div class="nom">Calzada Romana de la Boca del Infierno</div><div class="meta">Lineal i/v · ~4 km · +120 m · vía romana entre bosque, junto al desfiladero</div></div>
+      <span class="pet correa">🐾 Con correa</span>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">Los días 1, 4 y 6 no son de senderismo (llegada, pueblos y traslado). En todas las rutas, correa obligatoria por el Parque Natural y el ganado suelto; ante mastines, coged a Greta en brazos y bordead con calma.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🍽️ Dónde comer y cenar</h3>
+  <div class="comer-grid">
+    <div class="comer-card">
+      <div class="nom">Hotel de Montaña Usón</div>
+      <div class="ubi">Vuestro alojamiento · ctra. Selva de Oza</div>
+      <div class="desc">Cocina casera de montaña y la cerveza propia Pirineos Bier. La opción cómoda sin coger el coche.</div>
+      <div class="datos"><span class="tag si">Admite perros ✓</span> <span>🍺 Pirineos Bier</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Casa Blasquico / Gaby</div>
+      <div class="ubi">Hecho · Plaza la Fuente, 1</div>
+      <div class="desc">La mesa de referencia del valle. Civet de jabalí, verduras rellenas, ternasco. Reserva imprescindible.</div>
+      <div class="datos"><span class="tag consultar">Consultar 🐾</span> <span class="tel">📞 974 37 50 07</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Restaurante Castillo d'Acher</div>
+      <div class="ubi">Siresa · Plaza la Virgen, 9</div>
+      <div class="desc">Asador con terraza panorámica a 5 km del hotel. Carnes a la brasa del Pirineo.</div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 37 53 13</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Lo Foratón</div>
+      <div class="ubi">Hecho</div>
+      <div class="desc">Tapas y platos combinados. Admite perros en su terraza (confirmado en reseñas).</div>
+      <div class="datos"><span class="tag si">Terraza dog-friendly ✓</span> <span class="tel">📞 974 39 49 61</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Bordas del río Veral</div>
+      <div class="ubi">Ansó · ctra. de Zuriza</div>
+      <div class="desc">Borda Nadal y alrededores: terraza junto al río, migas a la pastora muy valoradas. Cómodo con perro.</div>
+      <div class="datos"><span class="tag consultar">Terraza junto al río 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Borda Bisaltico</div>
+      <div class="ubi">Hecho · ctra. de Gabardito</div>
+      <div class="desc">Asador con vistas a la peña Forca. Chuletón, solomillo, cuajada casera.</div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 34 89 40</span></div>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">⚠️ En julio (temporada alta) conviene reservar. Confirmad siempre la política de perros del local al reservar, priorizando terraza.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>📸 Visitas y actividades</h3>
+  <div class="visitas-grid">
+    <div class="visita-card"><span class="emo">🏘️</span><div><div class="nom">Hecho y Siresa</div><div class="desc">Casco de piedra chesa, museo de escultura al aire libre y el monasterio románico de San Pedro de Siresa.</div></div></div>
+    <div class="visita-card"><span class="emo">🏰</span><div><div class="nom">Ansó</div><div class="desc">Uno de los pueblos más bonitos de España, con su traje tradicional. A 25 km por la carretera del paso.</div></div></div>
+    <div class="visita-card"><span class="emo">🌊</span><div><div class="nom">Boca del Infierno</div><div class="desc">Desfiladero estrechísimo donde el río ruge entre paredes verticales. Visible desde la carretera.</div></div></div>
+    <div class="visita-card"><span class="emo">🍺</span><div><div class="nom">Cervecería Pirineos Bier</div><div class="desc">La cervecera artesana más antigua de Aragón en activo, en el propio hotel. Cata con vistas.</div></div></div>
+    <div class="visita-card"><span class="emo">⛪</span><div><div class="nom">Centro del Megalitismo</div><div class="desc">En la carretera de Oza, para entender los dólmenes y crómlechs de la zona. (Interior: consultar perros.)</div></div></div>
+    <div class="visita-card"><span class="emo">🚗</span><div><div class="nom">Carretera del paso Hecho–Ansó</div><div class="desc">Una de las más bonitas del Pirineo, con miradores. El trayecto ya es parte del plan.</div></div></div>
+  </div>
+</div>
+
+<div class="bloque-res">
+  <h3>💡 Consejos prácticos</h3>
+  <div class="consejos-grid">
+    <div class="consejo-card"><div class="tit">📵 Cobertura</div><div class="txt">En el hotel solo hay cobertura Movistar (débil), pero sí WiFi. Descargad mapas offline, tracks y el parte del tiempo por la noche.</div></div>
+    <div class="consejo-card"><div class="tit">🛒 Compras</div><div class="txt">Haced la compra en Hecho o Jaca antes de subir: arriba no hay tiendas. Agua, picnic y snacks de Greta.</div></div>
+    <div class="consejo-card"><div class="tit">🐑 Mastines y ganado</div><div class="txt">Hay ganado suelto en Aguas Tuertas y Oza. Si aparece un mastín de protección, coged a Greta en brazos, no corráis y bordead con calma.</div></div>
+    <div class="consejo-card"><div class="tit">🌡️ Calor de julio</div><div class="txt">Salid pronto. En zonas sin sombra (Aguas Tuertas), gorra, crema y agua de sobra. Cuidado con las patas de Greta sobre grava caliente.</div></div>
+    <div class="consejo-card"><div class="tit">🅿️ Aparcamientos</div><div class="txt">El parking de Guarrinza (Aguas Tuertas) es pequeño (~40 plazas) y se llena pronto. Llegad sobre las 8:30 h.</div></div>
+    <div class="consejo-card"><div class="tit">💧 Hidratación de Greta</div><div class="txt">Llevad siempre agua propia para ella; los ríos de deshielo están muy fríos y no siempre son fiables para beber.</div></div>
+  </div>
+</div>
+</section>
+
 <!-- ===================== VETERINARIOS ===================== -->
 <section class="vets wrap" id="veterinarios">
 <div class="vets-head">
@@ -1092,7 +1228,7 @@ a:hover{text-decoration:underline}
 <footer class="foot">
   <span class="eyebrow" style="color:#e9c97a">Campo base 1 de 3 · completado</span>
   <p style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--crema);margin-top:0.6rem">Siguiente parada: Broto</p>
-  <p>El segundo campo base continúa la guía hacia Ordesa. Lo añadiremos en cuanto confirmemos el alojamiento.</p>
+  <p>El segundo campo base continúa la guía hacia Broto y Ordesa, con base en Casa Rincón de Broto.</p>
   <p style="font-size:0.82rem;opacity:0.7;margin-top:1.5rem">Guía personal de viaje · Carles, Anna y Greta 🐾 · Pirineo Aragonés, julio 2026</p>
 </footer>
 

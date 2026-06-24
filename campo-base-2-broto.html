@@ -133,6 +133,43 @@ a:hover{text-decoration:underline}
 .wikiloc-link .txt b{color:var(--bosque);font-weight:600}
 .wikiloc-link .go{flex:0 0 auto;font-size:0.78rem;color:var(--ambar);font-weight:600;white-space:nowrap}
 .wikiloc-nota{font-size:0.82rem;color:var(--tinta-suave);padding:0 0.3rem;margin-top:0.2rem}
+/* ---------- RESUMEN DEL CAMPO BASE ---------- */
+.resumen{padding:1rem 0 0}
+.resumen-head{text-align:center;margin-bottom:2rem}
+.resumen-head .eyebrow{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ambar);font-weight:600}
+.resumen-head h2{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--bosque);font-weight:500;margin-top:0.4rem}
+.resumen-head p{color:var(--tinta-suave);max-width:640px;margin:0.6rem auto 0}
+.bloque-res{margin:2.5rem 0}
+.bloque-res > h3{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--bosque);font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--piedra-osc)}
+.tabla-rutas{display:grid;gap:0.7rem}
+.ruta-row{display:grid;grid-template-columns:auto 1fr auto;gap:0.9rem;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.ruta-row .dia-badge{background:var(--bosque);color:var(--crema);font-size:0.72rem;font-weight:600;border-radius:7px;padding:0.3rem 0.55rem;white-space:nowrap}
+.ruta-row .info .nom{font-weight:600;color:var(--bosque);font-size:0.98rem}
+.ruta-row .info .meta{font-size:0.83rem;color:var(--tinta-suave);margin-top:0.15rem}
+.ruta-row .pet{font-size:0.78rem;font-weight:600;padding:0.25rem 0.6rem;border-radius:100px;white-space:nowrap}
+.pet.ok{background:#e6efe2;color:#3a6b34}
+.pet.correa{background:#fbf3e0;color:#9a6a14}
+.comer-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.comer-card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.comer-card .nom{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--bosque)}
+.comer-card .ubi{font-size:0.8rem;color:var(--ambar);font-weight:600;margin:0.1rem 0 0.5rem}
+.comer-card .desc{font-size:0.88rem;color:var(--tinta-suave);margin-bottom:0.5rem}
+.comer-card .datos{font-size:0.82rem;color:var(--tinta);display:flex;flex-wrap:wrap;gap:0.4rem 0.9rem;align-items:center}
+.comer-card .tag{font-size:0.74rem;font-weight:600;padding:0.2rem 0.55rem;border-radius:100px}
+.comer-card .tag.si{background:#e6efe2;color:#3a6b34}
+.comer-card .tag.consultar{background:#fbf3e0;color:#9a6a14}
+.comer-card .tel{font-family:'Inter';font-weight:600}
+.visitas-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.visita-card{display:flex;gap:0.8rem;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.visita-card .emo{font-size:1.4rem;flex:0 0 auto}
+.visita-card .nom{font-weight:600;color:var(--bosque);font-size:0.96rem}
+.visita-card .desc{font-size:0.85rem;color:var(--tinta-suave);margin-top:0.15rem}
+.consejos-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.consejo-card{background:var(--blanco);border:1px solid var(--linea);border-left:3px solid var(--ambar);border-radius:10px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.consejo-card .tit{font-weight:600;color:var(--bosque);font-size:0.92rem;display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem}
+.consejo-card .txt{font-size:0.86rem;color:var(--tinta-suave)}
+@media(max-width:640px){.comer-grid,.visitas-grid,.consejos-grid{grid-template-columns:1fr}.ruta-row{grid-template-columns:auto 1fr}.ruta-row .pet{grid-column:2;justify-self:start}}
+
 
 /* ---------- NAV ENTRE CAMPOS BASE ---------- */
 .cbnav{background:var(--bosque);color:var(--crema);font-size:0.85rem}
@@ -255,6 +292,7 @@ a:hover{text-decoration:underline}
   <a href="#dia9">Día 9 · Aínsa</a>
   <a href="#dia10">Día 10 · Valle de Otal</a>
   <a href="#dia11">Día 11 · Traslado</a>
+  <a href="#resumen">📋 Resumen</a>
   <a href="#veterinarios">🏥 Vets</a>
 </div>
 </nav>
@@ -898,6 +936,104 @@ a:hover{text-decoration:underline}
   <span class="lbl">⚠️ Consejo del día</span>
   <p><strong>Cálculo de tiempos:</strong> saliendo de Broto hacia las 9:45 h, con la parada en Aínsa, llegáis a Benasque sobre las 13:00–13:30 h, con la tarde por delante para instalaros con calma.</p>
   <p><strong>Congosto de Ventamillo:</strong> es estrecho y con curvas; conducidlo con tranquilidad. Si alguien se marea, hay apartaderos para parar. Repostad en Aínsa o Campo antes del tramo de montaña.</p>
+</div>
+</section>
+
+<!-- ===================== RESUMEN DEL CAMPO BASE ===================== -->
+<section class="resumen wrap" id="resumen">
+<div class="resumen-head">
+  <span class="eyebrow">Vista de conjunto · Broto y Ordesa</span>
+  <h2>Resumen práctico del campo base</h2>
+  <p>Todo lo esencial de estos cinco días reunido para consultar de un vistazo: las rutas, dónde comer, qué visitar y los consejos clave para moverse por el valle del Ara con Greta.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🥾 Rutas de senderismo (resumen pet-friendly)</h3>
+  <div class="tabla-rutas">
+    <div class="ruta-row">
+      <span class="dia-badge">Día 7</span>
+      <div class="info"><div class="nom">Bujaruelo · Puente de Santa Elena</div><div class="meta">Lineal i/v · 5–7 km · suave · río Ara turquesa, fuera del Parque Nacional</div></div>
+      <span class="pet ok">🐾 Suelta con cabeza</span>
+    </div>
+    <div class="ruta-row">
+      <span class="dia-badge">Día 8</span>
+      <div class="info"><div class="nom">Torla · Camino del Turieto</div><div class="meta">Flexible · 2–3 h · suave · bosque de hayas junto al Arazas, asomado al cañón</div></div>
+      <span class="pet correa">🐾 Con correa</span>
+    </div>
+    <div class="ruta-row">
+      <span class="dia-badge">Día 10</span>
+      <div class="info"><div class="nom">Valle de Otal</div><div class="meta">Lineal i/v · ~7 km · suave · valle glaciar con marmotas, desde el puente de Bujaruelo</div></div>
+      <span class="pet ok">🐾 Suelta con cabeza</span>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">Los días 6, 9 y 11 no son de senderismo (llegada, Aínsa y traslado). En Bujaruelo y Otal, fuera del Parque Nacional, Greta puede ir suelta (con cabeza, hay ganado); en el Turieto, dentro de Ordesa, correa obligatoria.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🍽️ Dónde comer y cenar</h3>
+  <div class="comer-grid">
+    <div class="comer-card">
+      <div class="nom">Mesón Sorrosal</div>
+      <div class="ubi">Broto</div>
+      <div class="desc">Menú del día muy valorado y especialmente cuidadoso con los perros (les ponen agua sin pedirlo).</div>
+      <div class="datos"><span class="tag si">Terraza dog-friendly ✓</span> <span>💶 Menú ~19 €</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Terrazas de Torla</div>
+      <div class="ubi">Torla-Ordesa</div>
+      <div class="desc">La Brecha (casera familiar), L'Atalaya (rústico) o el patio de El Rebeco. Cocina de montaña con vistas.</div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span>💶 Menú ~21 €</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Refugio-Mesón de San Nicolás</div>
+      <div class="ubi">San Nicolás de Bujaruelo</div>
+      <div class="desc">El único punto con servicios del valle, junto al puente románico. Platos de cuchara de montaña.</div>
+      <div class="datos"><span class="tag consultar">Terraza de montaña 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Plaza Mayor de Aínsa</div>
+      <div class="ubi">Aínsa (día 9)</div>
+      <div class="desc">Varias casas de comidas con terraza bajo los soportales medievales. Producto del Sobrarbe.</div>
+      <div class="datos"><span class="tag consultar">Terrazas amplias 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Casa Joaquín / Las Endrinas</div>
+      <div class="ubi">Broto</div>
+      <div class="desc">Alternativas en el pueblo: cocina aragonesa de montaña, guisos y carnes a la brasa.</div>
+      <div class="datos"><span class="tag consultar">Consultar / terraza 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Biescas (en ruta)</div>
+      <div class="ubi">Llegada desde Hecho</div>
+      <div class="desc">Terrazas y zonas verdes junto al río Gállego, útil como parada el día de llegada.</div>
+      <div class="datos"><span class="tag consultar">Terraza junto al río 🐾</span></div>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">⚠️ En julio (temporada alta) conviene reservar. Confirmad siempre la política de perros del local al reservar, priorizando terraza.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>📸 Visitas y actividades</h3>
+  <div class="visitas-grid">
+    <div class="visita-card"><span class="emo">🏔️</span><div><div class="nom">Torla y el cañón de Ordesa</div><div class="desc">Uno de los pueblos más bonitos del Pirineo, puerta del Parque Nacional. El Turieto asoma al cañón sin masificación.</div></div></div>
+    <div class="visita-card"><span class="emo">🌉</span><div><div class="nom">Puente románico de Bujaruelo</div><div class="desc">Puente del s. XII sobre el río Ara turquesa. Postal del valle, y aquí Greta entra en la foto sin restricciones.</div></div></div>
+    <div class="visita-card"><span class="emo">💧</span><div><div class="nom">Cascada del Sorrosal</div><div class="desc">Salto de ~100 m escondido al borde de Broto, con pozas para refrescarse. Paseo corto desde el pueblo.</div></div></div>
+    <div class="visita-card"><span class="emo">🏰</span><div><div class="nom">Aínsa medieval</div><div class="desc">Villa con una de las plazas porticadas más bellas de Aragón, castillo y murallas. A 50 km por el río.</div></div></div>
+    <div class="visita-card"><span class="emo">🦌</span><div><div class="nom">Marmotas en el valle de Otal</div><div class="desc">Valle glaciar con fauna visible: marmotas casi seguras, y con suerte sarrios y rapaces.</div></div></div>
+    <div class="visita-card"><span class="emo">🚗</span><div><div class="nom">Congosto de Ventamillo</div><div class="desc">Desfiladero espectacular de camino al Campo Base 3, con la carretera encajonada entre paredes verticales.</div></div></div>
+  </div>
+</div>
+
+<div class="bloque-res">
+  <h3>💡 Consejos prácticos</h3>
+  <div class="consejos-grid">
+    <div class="consejo-card"><div class="tit">🚫 Bus de Ordesa</div><div class="txt">En julio el autobús a la Pradera de Ordesa es obligatorio y NO admite perros. Por eso la guía propone Bujaruelo y el Turieto, que se disfrutan con Greta.</div></div>
+    <div class="consejo-card"><div class="tit">🛤️ Pista de Bujaruelo</div><div class="txt">Los últimos ~8 km a San Nicolás son pista de tierra: conducidla despacio, sobre todo si ha llovido. Puede haber tasa de aparcamiento.</div></div>
+    <div class="consejo-card"><div class="tit">🛒 Servicios en Broto</div><div class="txt">Broto tiene super, farmacia y panadería. Comprad agua y picnic antes de subir a Bujaruelo, donde apenas hay servicios.</div></div>
+    <div class="consejo-card"><div class="tit">🐑 Ganado suelto</div><div class="txt">En Otal y Bujaruelo hay ganado en los prados. Aunque Greta vaya suelta en el camino, ponedle la correa al acercaros a rebaños y mastines.</div></div>
+    <div class="consejo-card"><div class="tit">🌡️ Calor y agua</div><div class="txt">Los tramos junto al río Ara son abiertos y soleados. Gorra, crema y agua propia: el río de deshielo es para refrescar patas, no para beber.</div></div>
+    <div class="consejo-card"><div class="tit">🅿️ Madrugar</div><div class="txt">Aínsa y los accesos a Bujaruelo se llenan en julio. Salid pronto para aparcar con holgura y caminar con el sol bajo.</div></div>
+  </div>
 </div>
 </section>
 

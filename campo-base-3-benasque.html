@@ -125,6 +125,43 @@ a:hover{text-decoration:underline}
 .wikiloc-link .txt b{color:var(--bosque);font-weight:600}
 .wikiloc-link .go{flex:0 0 auto;font-size:0.78rem;color:var(--ambar);font-weight:600;white-space:nowrap}
 .wikiloc-nota{font-size:0.82rem;color:var(--tinta-suave);padding:0 0.3rem;margin-top:0.2rem}
+/* ---------- RESUMEN DEL CAMPO BASE ---------- */
+.resumen{padding:1rem 0 0}
+.resumen-head{text-align:center;margin-bottom:2rem}
+.resumen-head .eyebrow{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ambar);font-weight:600}
+.resumen-head h2{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--bosque);font-weight:500;margin-top:0.4rem}
+.resumen-head p{color:var(--tinta-suave);max-width:640px;margin:0.6rem auto 0}
+.bloque-res{margin:2.5rem 0}
+.bloque-res > h3{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--bosque);font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:2px solid var(--piedra-osc)}
+.tabla-rutas{display:grid;gap:0.7rem}
+.ruta-row{display:grid;grid-template-columns:auto 1fr auto;gap:0.9rem;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.ruta-row .dia-badge{background:var(--bosque);color:var(--crema);font-size:0.72rem;font-weight:600;border-radius:7px;padding:0.3rem 0.55rem;white-space:nowrap}
+.ruta-row .info .nom{font-weight:600;color:var(--bosque);font-size:0.98rem}
+.ruta-row .info .meta{font-size:0.83rem;color:var(--tinta-suave);margin-top:0.15rem}
+.ruta-row .pet{font-size:0.78rem;font-weight:600;padding:0.25rem 0.6rem;border-radius:100px;white-space:nowrap}
+.pet.ok{background:#e6efe2;color:#3a6b34}
+.pet.correa{background:#fbf3e0;color:#9a6a14}
+.comer-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.comer-card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.comer-card .nom{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--bosque)}
+.comer-card .ubi{font-size:0.8rem;color:var(--ambar);font-weight:600;margin:0.1rem 0 0.5rem}
+.comer-card .desc{font-size:0.88rem;color:var(--tinta-suave);margin-bottom:0.5rem}
+.comer-card .datos{font-size:0.82rem;color:var(--tinta);display:flex;flex-wrap:wrap;gap:0.4rem 0.9rem;align-items:center}
+.comer-card .tag{font-size:0.74rem;font-weight:600;padding:0.2rem 0.55rem;border-radius:100px}
+.comer-card .tag.si{background:#e6efe2;color:#3a6b34}
+.comer-card .tag.consultar{background:#fbf3e0;color:#9a6a14}
+.comer-card .tel{font-family:'Inter';font-weight:600}
+.visitas-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.visita-card{display:flex;gap:0.8rem;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.visita-card .emo{font-size:1.4rem;flex:0 0 auto}
+.visita-card .nom{font-weight:600;color:var(--bosque);font-size:0.96rem}
+.visita-card .desc{font-size:0.85rem;color:var(--tinta-suave);margin-top:0.15rem}
+.consejos-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem}
+.consejo-card{background:var(--blanco);border:1px solid var(--linea);border-left:3px solid var(--ambar);border-radius:10px;padding:0.9rem 1.1rem;box-shadow:var(--sombra)}
+.consejo-card .tit{font-weight:600;color:var(--bosque);font-size:0.92rem;display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem}
+.consejo-card .txt{font-size:0.86rem;color:var(--tinta-suave)}
+@media(max-width:640px){.comer-grid,.visitas-grid,.consejos-grid{grid-template-columns:1fr}.ruta-row{grid-template-columns:auto 1fr}.ruta-row .pet{grid-column:2;justify-self:start}}
+
 
 /* ---------- NAV ENTRE CAMPOS BASE ---------- */
 .cbnav{background:var(--bosque);color:var(--crema);font-size:0.85rem}
@@ -249,6 +286,7 @@ a:hover{text-decoration:underline}
   <a href="#dia14">Día 14 · Cascadas</a>
   <a href="#dia15">Día 15 · Anciles</a>
   <a href="#dia16">Día 16 · Regreso</a>
+  <a href="#resumen">📋 Resumen</a>
   <a href="#veterinarios">🏥 Vets</a>
 </div>
 </nav>
@@ -853,6 +891,99 @@ a:hover{text-decoration:underline}
   <span class="lbl">⚠️ Consejo del día</span>
   <p><strong>Salida con margen:</strong> check-out sin prisa en La Terraceta de Linsoles. En julio hace calor en la llanura de Lleida: no dejéis nunca a Greta en el coche en las paradas, ni un minuto, y llevad agua fresca a mano.</p>
   <p>¡Buen viaje de vuelta! Con esto se cierran los 16 días por el Pirineo aragonés. 🐾</p>
+</div>
+</section>
+
+<!-- ===================== RESUMEN DEL CAMPO BASE ===================== -->
+<section class="resumen wrap" id="resumen">
+<div class="resumen-head">
+  <span class="eyebrow">Vista de conjunto · Benasque y el Aneto</span>
+  <h2>Resumen práctico del campo base</h2>
+  <p>Todo lo esencial de estos cinco días reunido para consultar de un vistazo: las rutas, dónde comer, qué visitar y los consejos clave para moverse por el valle de Benasque con Greta.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🥾 Rutas de senderismo (resumen pet-friendly)</h3>
+  <div class="tabla-rutas">
+    <div class="ruta-row">
+      <span class="dia-badge">Día 12</span>
+      <div class="info"><div class="nom">Valle de Estós</div><div class="meta">Flexible · 2–3 h · suave · valle glaciar con río y bosque, acceso libre en coche</div></div>
+      <span class="pet correa">🐾 Con correa</span>
+    </div>
+    <div class="ruta-row">
+      <span class="dia-badge">Día 13</span>
+      <div class="info"><div class="nom">Forau de Aigualluts</div><div class="meta">Desde La Besurta · 4,5–7 km · +300 m · pradera glaciar al pie del Aneto</div></div>
+      <span class="pet correa">🐾 Correa + bus</span>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">Los días 11, 14 y 15 no son de senderismo (llegada, cascadas/descanso y Anciles). Correa obligatoria en todo el Parque Natural Posets-Maladeta. A Aigualluts se sube en bus lanzadera, que SÍ admite perros (en transportín).</p>
+</div>
+
+<div class="bloque-res">
+  <h3>🍽️ Dónde comer y cenar</h3>
+  <div class="comer-grid">
+    <div class="comer-card">
+      <div class="nom">El Fogaril (Hotel Ciria)</div>
+      <div class="ubi">Benasque · Avda. los Tilos, s/n</div>
+      <div class="desc">El asador de referencia del valle: caza, carnes a la brasa y setas. Terraza amplia al aire libre.</div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 55 16 12</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Restaurante Ansils</div>
+      <div class="ubi">Anciles</div>
+      <div class="desc">Cocina del valle muy cuidada en la aldea de Anciles, reconocida por la Guía Repsol. Para una comida especial.</div>
+      <div class="datos"><span class="tag consultar">Consultar / reservar 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">La Parrilla</div>
+      <div class="ubi">Benasque</div>
+      <div class="desc">Muy valorada por sus carnes a la brasa. Buena opción para la cena de celebración del día del Aneto.</div>
+      <div class="datos"><span class="tag consultar">Consultar / terraza 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Casa Tous</div>
+      <div class="ubi">Benasque</div>
+      <div class="desc">Cocina ribagorzana en el casco. Alternativa cómoda en el pueblo para comidas y cenas.</div>
+      <div class="datos"><span class="tag consultar">Consultar / terraza 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">La Borda del Mastín</div>
+      <div class="ubi">Cerler (a pocos minutos)</div>
+      <div class="desc">Borda de montaña en el pueblo más alto del valle. Ambiente acogedor y producto local.</div>
+      <div class="datos"><span class="tag consultar">Consultar 🐾</span></div>
+    </div>
+    <div class="comer-card">
+      <div class="nom">Bar de La Besurta</div>
+      <div class="ubi">Cabecera del valle (día 13)</div>
+      <div class="desc">Junto a la parada del bus lanzadera, para algo caliente al volver de Aigualluts. Terraza de alta montaña.</div>
+      <div class="datos"><span class="tag consultar">Terraza exterior 🐾</span></div>
+    </div>
+  </div>
+  <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">⚠️ En julio (temporada alta) conviene reservar, sobre todo El Fogaril y Ansils. Confirmad siempre la política de perros del local al reservar, priorizando terraza.</p>
+</div>
+
+<div class="bloque-res">
+  <h3>📸 Visitas y actividades</h3>
+  <div class="visitas-grid">
+    <div class="visita-card"><span class="emo">🏔️</span><div><div class="nom">Forau de Aigualluts y el Aneto</div><div class="desc">Cascada donde el deshielo del Aneto se sume bajo tierra, en una pradera glaciar al pie del techo del Pirineo.</div></div></div>
+    <div class="visita-card"><span class="emo">🏘️</span><div><div class="nom">Casco de Benasque</div><div class="desc">Casonas blasonadas, fuentes de bronce y portones con cabezas de vaca. Pueblo de tradición montañera.</div></div></div>
+    <div class="visita-card"><span class="emo">🪨</span><div><div class="nom">Aldea de Anciles</div><div class="desc">Uno de los conjuntos rurales mejor conservados del Pirineo, casi sin turismo. A 3 km de Benasque.</div></div></div>
+    <div class="visita-card"><span class="emo">💧</span><div><div class="nom">Gorgas del Alba</div><div class="desc">Sucesión de cascadas y pozas del Ésera, visibles desde miradores con un paseo corto. Día de descanso.</div></div></div>
+    <div class="visita-card"><span class="emo">🌲</span><div><div class="nom">Valle de Estós</div><div class="desc">Valle glaciar con acceso libre en coche, río, cascadas y vistas al Posets. El más amable para Greta.</div></div></div>
+    <div class="visita-card"><span class="emo">🪂</span><div><div class="nom">Castejón de Sos</div><div class="desc">Capital del parapente, de camino por el valle. Cielo lleno de velas de colores en verano.</div></div></div>
+  </div>
+</div>
+
+<div class="bloque-res">
+  <h3>💡 Consejos prácticos</h3>
+  <div class="consejos-grid">
+    <div class="consejo-card"><div class="tit">✅ Bus de Aigualluts</div><div class="txt">A diferencia de Ordesa, el bus lanzadera del Vado a La Besurta SÍ admite perros (en transportín, máx. 2 por viaje, ~1,50 €). Llevad efectivo y madrugad.</div></div>
+    <div class="consejo-card"><div class="tit">⛰️ Alta montaña</div><div class="txt">Aigualluts supera los 2.000 m: aunque sea julio, llevad capa de abrigo e impermeable. Por la tarde son frecuentes las tormentas, salid pronto.</div></div>
+    <div class="consejo-card"><div class="tit">🅿️ Estós libre</div><div class="txt">El parking de Estós es gratuito y de acceso libre en coche, sin bus. Pero se llena pronto en fin de semana: llegad sobre las 8:30 h.</div></div>
+    <div class="consejo-card"><div class="tit">🏥 Servicios</div><div class="txt">Benasque tiene supermercados, farmacia, tiendas de montaña y clínica veterinaria (ver sección siguiente). Base muy cómoda.</div></div>
+    <div class="consejo-card"><div class="tit">🐾 Descanso de Greta</div><div class="txt">Tras Aigualluts, el día 14 es de bajo impacto: revisad sus patas y almohadillas. Un día de descanso le viene tan bien como a vosotros.</div></div>
+    <div class="consejo-card"><div class="tit">📍 Confirmar in situ</div><div class="txt">Verificad horarios y política de perros del bus del año en la oficina de turismo o con AVANZA (638 073 498): pueden variar por temporada.</div></div>
+  </div>
 </div>
 </section>
 
