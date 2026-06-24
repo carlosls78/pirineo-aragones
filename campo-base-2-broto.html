@@ -122,6 +122,40 @@ a:hover{text-decoration:underline}
 .consejo .lbl{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ambar);font-weight:600;display:block;margin-bottom:0.4rem}
 .consejo p{color:var(--tinta-suave);font-size:0.95rem;margin-bottom:0.5rem}
 .consejo p:last-child{margin-bottom:0}
+/* ---------- ENLACES WIKILOC ---------- */
+.wikiloc{margin:1.5rem 0;border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:var(--blanco)}
+.wikiloc-titulo{padding:0.85rem 1.3rem;background:var(--crema);color:var(--bosque);font-family:'Fraunces',serif;font-size:1.02rem;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid var(--linea)}
+.wikiloc-body{padding:1rem 1.3rem;display:grid;gap:0.6rem}
+.wikiloc-link{display:flex;align-items:center;gap:0.7rem;padding:0.65rem 0.9rem;border:1px solid var(--linea);border-radius:10px;text-decoration:none;color:var(--tinta);background:var(--crema);transition:background 0.15s,border-color 0.15s}
+.wikiloc-link:hover{background:#eef2e5;border-color:var(--bosque-claro);text-decoration:none}
+.wikiloc-link .ico{font-size:1.1rem;flex:0 0 auto}
+.wikiloc-link .txt{flex:1;min-width:0;font-size:0.92rem;line-height:1.3}
+.wikiloc-link .txt b{color:var(--bosque);font-weight:600}
+.wikiloc-link .go{flex:0 0 auto;font-size:0.78rem;color:var(--ambar);font-weight:600;white-space:nowrap}
+.wikiloc-nota{font-size:0.82rem;color:var(--tinta-suave);padding:0 0.3rem;margin-top:0.2rem}
+
+/* ---------- NAV ENTRE CAMPOS BASE ---------- */
+.cbnav{background:var(--bosque);color:var(--crema);font-size:0.85rem}
+.cbnav-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:0.3rem;padding:0.5rem 1rem;flex-wrap:wrap}
+.cbnav a{color:rgba(246,243,234,0.82);text-decoration:none;padding:0.3rem 0.7rem;border-radius:7px;font-weight:500;white-space:nowrap;transition:background 0.15s,color 0.15s}
+.cbnav a:hover{background:rgba(246,243,234,0.14);color:var(--crema);text-decoration:none}
+.cbnav a.home{color:#e9c97a}
+.cbnav .sep{flex:1}
+.cbnav a.actual{background:rgba(233,201,122,0.22);color:#e9c97a;font-weight:600}
+@media(max-width:600px){.cbnav .lbl-larga{display:none}}
+
+/* ---------- SALTO ENTRE CAMPOS BASE (pie) ---------- */
+.cbjump{max-width:1080px;margin:0 auto;padding:2.5rem 1.5rem 0}
+.cbjump h3{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--bosque);margin-bottom:1rem;text-align:center;font-weight:500}
+.cbjump-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem}
+.cbjump-card{display:flex;flex-direction:column;gap:0.2rem;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:1rem 1.2rem;text-decoration:none;color:inherit;box-shadow:var(--sombra);transition:transform 0.18s,box-shadow 0.18s}
+.cbjump-card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(35,41,31,0.1);text-decoration:none}
+.cbjump-card .eslabon{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ambar);font-weight:600}
+.cbjump-card .nom{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--bosque)}
+.cbjump-card .fech{font-size:0.82rem;color:var(--tinta-suave)}
+.cbjump-card.home{background:var(--crema)}
+@media(max-width:600px){.cbjump-grid{grid-template-columns:1fr}}
+
 /* ---------- HORARIO ORIENTATIVO ---------- */
 .horario{margin:1.5rem 0;border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:var(--blanco)}
 .horario-titulo{padding:0.9rem 1.3rem;background:var(--crema);color:var(--bosque);font-family:'Fraunces',serif;font-size:1.05rem;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid var(--linea)}
@@ -181,6 +215,16 @@ a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
+
+<nav class="cbnav" aria-label="Navegación entre campos base">
+<div class="cbnav-inner">
+  <a class="home" href="index.html">← <span class="lbl-larga">Índice de la </span>guía</a>
+  <span class="sep"></span>
+  <a href="campo-base-1-valle-de-hecho.html">1 · Hecho</a>
+  <a class="actual" href="campo-base-2-broto.html">2 · Broto</a>
+  <a href="campo-base-3-benasque.html">3 · Benasque</a>
+</div>
+</nav>
 
 <header class="hero">
 <svg class="hero-mountains" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -395,6 +439,16 @@ a:hover{text-decoration:underline}
     </div></div>
   </div>
 </div>
+<div class="wikiloc">
+  <div class="wikiloc-titulo">🥾 Rutas en Wikiloc</div>
+  <div class="wikiloc-body">
+    <a class="wikiloc-link" href="https://www.wikiloc.com/hiking-trails/del-puente-san-nicolas-de-bujaruelo-al-puente-nuevo-o-de-santa-elena-por-la-senda-de-los-abetos-p-n-20719774" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>San Nicolás → Santa Elena por la Senda de los Abetos</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://es.wikiloc.com/rutas-senderismo/san-nicolas-de-bujaruelo-puente-de-santa-elena-por-la-senda-de-los-abetos-valle-de-bujaruelo-torla-30281335" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>San Nicolás - Santa Elena (Senda de los Abetos)</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://es.wikiloc.com/rutas-senderismo/puente-de-santa-elena-a-san-nicolas-de-bujaruelo-31201982" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Puente de Santa Elena a San Nicolás de Bujaruelo</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <p class="wikiloc-nota">⚠️ Recorrido llano junto al río Ara, fuera del Parque Nacional: Greta puede ir suelta con cabeza. Los tracks son orientativos: descargad el GPX y revisad estado y meteo antes de salir.</p>
+  </div>
+</div>
+
 
 <div class="destacado">
   <span class="lbl">🌅 Momento destacado del día</span>
@@ -507,6 +561,16 @@ a:hover{text-decoration:underline}
     </div></div>
   </div>
 </div>
+<div class="wikiloc">
+  <div class="wikiloc-titulo">🥾 Rutas en Wikiloc</div>
+  <div class="wikiloc-body">
+    <a class="wikiloc-link" href="https://www.wikiloc.com/hiking-trails/torla-pradera-de-ordesa-por-el-camino-de-turieto-4216156" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Torla - Pradera de Ordesa por el Turieto</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://www.wikiloc.com/hiking-trails/torla-turieto-bajo-pradera-de-ordesa-turieto-alto-torla-p-n-de-ordesa-y-monte-perdido-20652469" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Torla, Turieto Bajo, Pradera, Turieto Alto</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://es.wikiloc.com/rutas-senderismo/pradera-de-ordesa-desde-torla-por-el-bosque-de-turieto-semicircular-bajando-por-las-cascadas-del-ri-57670768" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Pradera de Ordesa desde Torla por el Bosque de Turieto</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <p class="wikiloc-nota">⚠️ Haced el tramo que apetezca y volved; no hace falta llegar a la pradera. Greta con correa (Parque Nacional). Los tracks son orientativos: descargad el GPX y revisad estado y meteo antes de salir.</p>
+  </div>
+</div>
+
 
 <div class="destacado">
   <span class="lbl">🌅 Momento destacado del día</span>
@@ -706,6 +770,16 @@ a:hover{text-decoration:underline}
     </div></div>
   </div>
 </div>
+<div class="wikiloc">
+  <div class="wikiloc-titulo">🥾 Rutas en Wikiloc</div>
+  <div class="wikiloc-body">
+    <a class="wikiloc-link" href="https://www.wikiloc.com/hiking-trails/san-nicolas-de-bujaruelo-valle-de-bujaruelo-valle-de-otal-refugio-de-otal-cascada-de-otal-17237247" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Bujaruelo - Valle de Otal - Cascada de Otal</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://www.wikiloc.com/hiking-trails/bujaruelo-circular-desde-puente-de-santa-elena-29649680" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Bujaruelo - Circular desde Puente de Santa Elena</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <a class="wikiloc-link" href="https://es.wikiloc.com/rutas-senderismo/bujaruelo-bosque-de-cobatar-puente-santa-elena-puente-oncins-87004681" target="_blank" rel="noopener"><span class="ico">🥾</span><span class="txt"><b>Bujaruelo (bosque de Cobatar) - Puente Oncins</b></span><span class="go">Ver en Wikiloc →</span></a>
+    <p class="wikiloc-nota">⚠️ Las rutas de Otal suelen combinar Bujaruelo + Otal, justo vuestro recorrido del día. Los tracks son orientativos: descargad el GPX y revisad estado y meteo antes de salir.</p>
+  </div>
+</div>
+
 
 <div class="destacado">
   <span class="lbl">🌅 Momento destacado del día</span>
@@ -858,6 +932,28 @@ a:hover{text-decoration:underline}
 </div>
 <p style="font-size:0.85rem;color:var(--tinta-suave);margin-top:1rem">⚠️ En Broto y Torla mismos no hay clínica veterinaria permanente: confirmad en el alojamiento si hay servicio puntual antes de necesitarlo. Aínsa es la apuesta segura.</p>
 </section>
+
+<!-- ===== SALTO ENTRE CAMPOS BASE ===== -->
+<nav class="cbjump" aria-label="Ir a otro campo base">
+  <h3>Seguir explorando la guía</h3>
+  <div class="cbjump-grid">
+  <a class="cbjump-card home" href="index.html">
+    <span class="eslabon">Volver a</span>
+    <span class="nom">🏠 Índice de la guía</span>
+    <span class="fech">Los 3 campos base</span>
+  </a>
+  <a class="cbjump-card" href="campo-base-1-valle-de-hecho.html">
+    <span class="eslabon">Campo base 1</span>
+    <span class="nom">Valle de Hecho</span>
+    <span class="fech">1–6 julio</span>
+  </a>
+  <a class="cbjump-card" href="campo-base-3-benasque.html">
+    <span class="eslabon">Campo base 3</span>
+    <span class="nom">Benasque y el Aneto</span>
+    <span class="fech">11–16 julio</span>
+  </a>
+  </div>
+</nav>
 
 <footer class="foot">
   <span class="eyebrow" style="color:#e9c97a">Campo base 2 de 3 · completado</span>
