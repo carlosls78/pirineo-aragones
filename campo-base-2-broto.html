@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Broto y Ordesa · Campo Base 2 — Guía de viaje con Greta</title>
+<meta name="description" content="Campo Base 2: Broto y Ordesa (6–11 julio). Bujaruelo, Turieto y Otal con perro, restaurantes dog-friendly, Aínsa y consejos prácticos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%232f4a32%27/%3E%3Cg fill=%27%23f6f3ea%27%3E%3Cellipse cx=%2750%27 cy=%2762%27 rx=%2716%27 ry=%2713%27/%3E%3Cellipse cx=%2730%27 cy=%2742%27 rx=%277%27 ry=%279%27/%3E%3Cellipse cx=%2770%27 cy=%2742%27 rx=%277%27 ry=%279%27/%3E%3Cellipse cx=%2742%27 cy=%2732%27 rx=%276%27 ry=%278%27/%3E%3Cellipse cx=%2758%27 cy=%2732%27 rx=%276%27 ry=%278%27/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Broto y Ordesa · Campo Base 2 — Guía con Greta">
+<meta property="og:description" content="Campo Base 2: Broto y Ordesa (6–11 julio). Bujaruelo, Turieto y Otal con perro, restaurantes dog-friendly, Aínsa y consejos prácticos.">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,6 +30,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+section[id], [id]{scroll-margin-top:84px}
 body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
 .eyebrow{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambar)}
@@ -249,6 +256,30 @@ a:hover{text-decoration:underline}
   .bloque-head .hora{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- IMPRESIÓN / PDF ---------- */
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:11pt}
+  .cbnav,.daynav,.cbjump,.subir{display:none !important}
+  .hero{min-height:auto;padding:1.5rem 0}
+  .hero-mountains{display:none}
+  a[href^="http"]:not(.btn-maps):not(.wikiloc-link){color:inherit;text-decoration:none}
+  .wikiloc-link,.btn-maps{border:1px solid #ccc !important;background:#f5f5f5 !important;color:#333 !important}
+  .wikiloc-link .go{display:none}
+  .tramo-panel{max-height:none !important;height:auto !important;overflow:visible !important;display:block !important}
+  .tramo-btn .chev{display:none}
+  .dia,.bloque-res,.vets,.resumen{break-inside:avoid-page}
+  .dia-head,.bloque-res>h3{break-after:avoid}
+  section{break-inside:auto}
+  .destacado,.consejo,.contexto,.comer-card,.visita-card,.consejo-card,.ruta-row,.wikiloc,.ficha,.horario{break-inside:avoid}
+  @page{margin:1.5cm}
+}
+
+/* ---------- BOTÓN VOLVER ARRIBA ---------- */
+.subir{position:fixed;bottom:1.3rem;right:1.3rem;z-index:60;width:46px;height:46px;border-radius:50%;background:var(--bosque);color:var(--crema);border:none;cursor:pointer;font-size:1.3rem;line-height:1;box-shadow:0 3px 10px rgba(35,41,31,0.3);opacity:0;visibility:hidden;transition:opacity 0.25s,visibility 0.25s,transform 0.15s}
+.subir.visible{opacity:0.92;visibility:visible}
+.subir:hover{opacity:1;transform:translateY(-2px)}
 </style>
 </head>
 <body>
@@ -1091,6 +1122,8 @@ a:hover{text-decoration:underline}
   </div>
 </nav>
 
+<button class="subir" id="subir" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
 <footer class="foot">
   <span class="eyebrow" style="color:#e9c97a">Campo base 2 de 3 · completado</span>
   <p style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--crema);margin-top:0.6rem">Siguiente parada: Benasque y el Aneto</p>
@@ -1126,6 +1159,17 @@ try{
   }
 }catch(e){}
 
+
+/* ---------- Botón volver arriba ---------- */
+try{
+  var btnSubir=document.getElementById('subir');
+  if(btnSubir){
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>600){btnSubir.classList.add('visible');}else{btnSubir.classList.remove('visible');}
+    });
+    btnSubir.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  }
+}catch(e){}
 </script>
 
 </body>

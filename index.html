@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pirineo Aragonés con Greta · Guía del viaje · 1–16 julio 2026</title>
+<meta name="description" content="Guía de viaje de 16 días por el Pirineo Aragonés (1–16 julio 2026) con perro: Valle de Hecho, Broto-Ordesa y Benasque. Rutas pet-friendly, restaurantes y consejos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%232f4a32%27/%3E%3Cg fill=%27%23f6f3ea%27%3E%3Cellipse cx=%2750%27 cy=%2762%27 rx=%2716%27 ry=%2713%27/%3E%3Cellipse cx=%2730%27 cy=%2742%27 rx=%277%27 ry=%279%27/%3E%3Cellipse cx=%2770%27 cy=%2742%27 rx=%277%27 ry=%279%27/%3E%3Cellipse cx=%2742%27 cy=%2732%27 rx=%276%27 ry=%278%27/%3E%3Cellipse cx=%2758%27 cy=%2732%27 rx=%276%27 ry=%278%27/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pirineo Aragonés con Greta · Guía del viaje">
+<meta property="og:description" content="Guía de viaje de 16 días por el Pirineo Aragonés (1–16 julio 2026) con perro: Valle de Hecho, Broto-Ordesa y Benasque. Rutas pet-friendly, restaurantes y consejos.">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,6 +22,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+section[id], [id]{scroll-margin-top:84px}
 body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
 .eyebrow{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambar)}
@@ -110,6 +117,25 @@ a{color:var(--agua);text-decoration:none}
   .base-num{width:60px;height:60px;font-size:2.2rem}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+
+/* ---------- IMPRESIÓN / PDF ---------- */
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;font-size:11pt}
+  .cbnav,.daynav,.cbjump,.subir{display:none !important}
+  .hero{min-height:auto;padding:1.5rem 0}
+  .hero-mountains{display:none}
+  a[href^="http"]:not(.btn-maps):not(.wikiloc-link){color:inherit;text-decoration:none}
+  .wikiloc-link,.btn-maps{border:1px solid #ccc !important;background:#f5f5f5 !important;color:#333 !important}
+  .wikiloc-link .go{display:none}
+  .tramo-panel{max-height:none !important;height:auto !important;overflow:visible !important;display:block !important}
+  .tramo-btn .chev{display:none}
+  .dia,.bloque-res,.vets,.resumen{break-inside:avoid-page}
+  .dia-head,.bloque-res>h3{break-after:avoid}
+  section{break-inside:auto}
+  .destacado,.consejo,.contexto,.comer-card,.visita-card,.consejo-card,.ruta-row,.wikiloc,.ficha,.horario{break-inside:avoid}
+  @page{margin:1.5cm}
+}
 </style>
 </head>
 <body>
