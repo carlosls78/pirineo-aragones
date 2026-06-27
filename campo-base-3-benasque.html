@@ -23,6 +23,22 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 section[id], [id]{scroll-margin-top:84px}
+/* ---------- EMERGENCIAS ---------- */
+.emergencias{margin:1.2rem 0 1.8rem;background:linear-gradient(135deg,#7a2d2d,#9a3a3a);border-radius:16px;padding:1.3rem 1.5rem;color:#fdeaea}
+.emergencias h3{font-family:'Fraunces',serif;font-size:1.1rem;color:#fff;font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.9rem}
+.emergencias-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.emerg-item{background:rgba(255,255,255,0.12);border-radius:10px;padding:0.7rem 0.95rem;display:flex;flex-direction:column;gap:0.15rem}
+.emerg-item .lbl{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.06em;opacity:0.85}
+.emerg-item .num{font-size:1.15rem;font-weight:600}
+.emerg-item .num a{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.5)}
+.emerg-item .num a:hover{border-bottom-color:#fff}
+.emerg-item .sub{font-size:0.78rem;opacity:0.85}
+@media(max-width:560px){.emergencias-grid{grid-template-columns:1fr}}
+
+/* ---------- TELÉFONOS CLICABLES ---------- */
+a.tel-link{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+a.tel-link:hover{color:var(--ambar);border-bottom-color:var(--ambar)}
+
 body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
 .eyebrow{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambar)}
@@ -435,7 +451,7 @@ a:hover{text-decoration:underline}
         <li>Setas de temporada, arroces</li>
         <li>Natillas con galleta caseras de postre</li>
       </ul>
-      <p class="precio">💶 Menú ~30-35 € · 📞 974 55 16 12 · Avda. los Tilos, s/n</p>
+      <p class="precio">💶 Menú ~30-35 € · 📞 <a class="tel-link" href="tel:+34974551612">974 55 16 12</a> · Avda. los Tilos, s/n</p>
       <p style="font-size:0.88rem">⚠️ Verificar política de perros de La Terraceta de Linsoles (vuestro alojamiento).</p>
     </div>
   </div>
@@ -654,7 +670,7 @@ a:hover{text-decoration:underline}
   <div class="acceso-body">
     <p>Como el coche particular no puede subir a La Besurta en verano y el autobús obliga a llevar a Greta en transportín en el maletero, <strong>vuestra opción es el taxi 4×4</strong>: un todoterreno autorizado a circular por la pista regulada, en el que Greta viaja con vosotros en el habitáculo. Funciona como en muchos parques: os suben, <strong>acordáis la hora de recogida</strong> para la bajada y os esperan o vuelven a por vosotros a esa hora.</p>
     <div class="acceso-datos">
-      <div class="fila"><span class="et">Empresas</span><span class="val">Taxi Benasque Excursiones 4×4 (Ángel Lledó) · <span class="tel">608 930 450</span><br>Taxi Valle de Benasque · vehículos 4×4 de 8–9 plazas</span></div>
+      <div class="fila"><span class="et">Empresas</span><span class="val">Taxi Benasque Excursiones 4×4 (Ángel Lledó) · <span class="tel"><a class="tel-link" href="tel:+34608930450">608 930 450</a></span><br>Taxi Valle de Benasque · vehículos 4×4 de 8–9 plazas</span></div>
       <div class="fila"><span class="et">Modelo</span><span class="val">Privado para vuestro grupo o plaza compartida; subida + recogida a hora pactada</span></div>
       <div class="fila"><span class="et">Precio</span><span class="val">⚠️ A consultar al reservar (no hay tarifa pública; depende de privado/compartido). De referencia, el bus i/v desde Llanos del Hospital ronda los 5 €/persona; el 4×4 es bastante más por ser privado)</span></div>
       <div class="fila"><span class="et">Greta</span><span class="val">En el habitáculo con vosotros ⚠️ confirmad la política de perro al reservar</span></div>
@@ -699,14 +715,14 @@ a:hover{text-decoration:underline}
         <li>Chiretas (embutido típico ribagorzano)</li>
         <li>Natillas con galleta caseras</li>
       </ul>
-      <p class="precio">💶 30–35 € por persona · 📞 El Fogaril 974 55 16 12</p>
+      <p class="precio">💶 30–35 € por persona · 📞 El Fogaril <a class="tel-link" href="tel:+34974551612">974 55 16 12</a></p>
     </div>
   </div>
 </div>
 
 <div class="consejo">
   <span class="lbl">⚠️ Consejo del día</span>
-  <p><strong>Reservad el taxi 4×4:</strong> llamad con antelación (Ángel Lledó 608 930 450 u otra empresa del valle), confirmad que admiten a Greta en el habitáculo y pactad las horas de subida y bajada. Llevad efectivo por si no aceptan tarjeta.</p>
+  <p><strong>Reservad el taxi 4×4:</strong> llamad con antelación (Ángel Lledó <a class="tel-link" href="tel:+34608930450">608 930 450</a> u otra empresa del valle), confirmad que admiten a Greta en el habitáculo y pactad las horas de subida y bajada. Llevad efectivo por si no aceptan tarjeta.</p>
   <p><strong>Alta montaña (2.000+ m):</strong> aunque sea julio, llevad una capa de abrigo e impermeable; el tiempo cambia rápido y por la tarde son habituales las tormentas. Salid pronto para bajar antes de que se complique.</p>
 </div>
 </section>
@@ -864,7 +880,7 @@ a:hover{text-decoration:underline}
         <li>Caza de temporada</li>
         <li>Natillas con galleta caseras · un brindis final</li>
       </ul>
-      <p class="precio">💶 30–35 € por persona · 📞 974 55 16 12</p>
+      <p class="precio">💶 30–35 € por persona · 📞 <a class="tel-link" href="tel:+34974551612">974 55 16 12</a></p>
     </div>
   </div>
 </div>
@@ -983,7 +999,7 @@ a:hover{text-decoration:underline}
       <div class="nom">El Fogaril (Hotel Ciria)</div>
       <div class="ubi">Benasque · Avda. los Tilos, s/n</div>
       <div class="desc">El asador de referencia del valle: caza, carnes a la brasa y setas. Terraza amplia al aire libre.</div>
-      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 55 16 12</span></div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 <a class="tel-link" href="tel:+34974551612">974 55 16 12</a></span></div>
     </div>
     <div class="comer-card">
       <div class="nom">Restaurante Ansils</div>
@@ -1034,7 +1050,7 @@ a:hover{text-decoration:underline}
 <div class="bloque-res">
   <h3>💡 Consejos prácticos</h3>
   <div class="consejos-grid">
-    <div class="consejo-card"><div class="tit">🚕 Taxi 4×4 a Aigualluts</div><div class="txt">El coche no sube a La Besurta en verano. Para llevar a Greta cómoda (en el habitáculo, no en transportín), reservad taxi 4×4: Ángel Lledó 608 930 450. Pactad subida y recogida.</div></div>
+    <div class="consejo-card"><div class="tit">🚕 Taxi 4×4 a Aigualluts</div><div class="txt">El coche no sube a La Besurta en verano. Para llevar a Greta cómoda (en el habitáculo, no en transportín), reservad taxi 4×4: Ángel Lledó <a class="tel-link" href="tel:+34608930450">608 930 450</a>. Pactad subida y recogida.</div></div>
     <div class="consejo-card"><div class="tit">⛰️ Alta montaña</div><div class="txt">Aigualluts supera los 2.000 m: aunque sea julio, llevad capa de abrigo e impermeable. Por la tarde son frecuentes las tormentas, salid pronto.</div></div>
     <div class="consejo-card"><div class="tit">🅿️ Estós libre</div><div class="txt">El parking de Estós es gratuito y de acceso libre en coche, sin bus. Pero se llena pronto en fin de semana: llegad sobre las 8:30 h.</div></div>
     <div class="consejo-card"><div class="tit">🏥 Servicios</div><div class="txt">Benasque tiene supermercados, farmacia, tiendas de montaña y clínica veterinaria (ver sección siguiente). Base muy cómoda.</div></div>
@@ -1062,13 +1078,24 @@ a:hover{text-decoration:underline}
   <h2>Veterinarios de la zona</h2>
 </div>
 <p class="vets-intro">El Valle de Benasque está bien cubierto: tenéis clínica en el propio Benasque, a un paso de Eriste, con urgencias 24 h. Guardad los teléfonos antes de subir a las rutas de alta montaña, donde no hay cobertura.</p>
+
+<div class="emergencias">
+  <h3>🚨 Emergencias · números clave</h3>
+  <div class="emergencias-grid">
+    <div class="emerg-item"><span class="lbl">Emergencias (general y montaña)</span><span class="num"><a href="tel:112">112</a></span><span class="sub">Bomberos, rescate de montaña, sanitarias y Guardia Civil</span></div>
+    <div class="emerg-item"><span class="lbl">Urgencias veterinarias</span><span class="num"><a href="tel:+34657350043">657 35 00 43</a></span><span class="sub">Clínica Veterinaria Benás (24h) · Benasque</span></div>
+    <div class="emerg-item"><span class="lbl">Guardia Civil</span><span class="num"><a href="tel:062">062</a></span><span class="sub">Incidencias en carretera y montaña</span></div>
+    <div class="emerg-item"><span class="lbl">Info toxicológica (mascotas)</span><span class="num"><a href="tel:+34915620420">91 562 04 20</a></span><span class="sub">Si Greta ingiere algo tóxico</span></div>
+  </div>
+</div>
+
 <div class="vet-grid">
   <div class="vet-card urgencia">
     <h3>Clínica Veterinaria Benás</h3>
     <div class="dist">Benasque · a ~3 km de Eriste · ⭐ 4,9/5</div>
     <dl>
       <dt>Localidad</dt><dd>Benasque, 22440 Huesca</dd>
-      <dt>Teléfono</dt><dd><span class="tel">657 35 00 43</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34657350043">657 35 00 43</a></span></dd>
       <dt>Servicios</dt><dd>Consulta, laboratorio, quirófano, rayos X y tienda</dd>
     </dl>
     <span class="badge-urg">🚨 Urgencias 24 h</span>
@@ -1078,8 +1105,8 @@ a:hover{text-decoration:underline}
     <div class="dist">Benasque · consulta en C. Director Ferraz, 24</div>
     <dl>
       <dt>Dirección</dt><dd>C. Director Ferraz, 24, 22440 Benasque</dd>
-      <dt>Teléfono</dt><dd><span class="tel">974 54 65 92</span></dd>
-      <dt>Urgencias</dt><dd><span class="tel">686 97 55 00</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974546592">974 54 65 92</a></span></dd>
+      <dt>Urgencias</dt><dd><span class="tel"><a class="tel-link" href="tel:+34686975500">686 97 55 00</a></span></dd>
       <dt>Nota</dt><dd>⚠️ Atienden en Benasque solo algunos días; su clínica está en Graus</dd>
     </dl>
   </div>

@@ -31,6 +31,22 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 section[id], [id]{scroll-margin-top:84px}
+/* ---------- EMERGENCIAS ---------- */
+.emergencias{margin:1.2rem 0 1.8rem;background:linear-gradient(135deg,#7a2d2d,#9a3a3a);border-radius:16px;padding:1.3rem 1.5rem;color:#fdeaea}
+.emergencias h3{font-family:'Fraunces',serif;font-size:1.1rem;color:#fff;font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.9rem}
+.emergencias-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.emerg-item{background:rgba(255,255,255,0.12);border-radius:10px;padding:0.7rem 0.95rem;display:flex;flex-direction:column;gap:0.15rem}
+.emerg-item .lbl{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.06em;opacity:0.85}
+.emerg-item .num{font-size:1.15rem;font-weight:600}
+.emerg-item .num a{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.5)}
+.emerg-item .num a:hover{border-bottom-color:#fff}
+.emerg-item .sub{font-size:0.78rem;opacity:0.85}
+@media(max-width:560px){.emergencias-grid{grid-template-columns:1fr}}
+
+/* ---------- TELÉFONOS CLICABLES ---------- */
+a.tel-link{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+a.tel-link:hover{color:var(--ambar);border-bottom-color:var(--ambar)}
+
 body{font-family:'Inter',system-ui,sans-serif;color:var(--tinta);background:var(--crema);line-height:1.7;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15}
 .eyebrow{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--ambar)}
@@ -1086,14 +1102,25 @@ a:hover{text-decoration:underline}
   <h2>Veterinarios de la zona</h2>
 </div>
 <p class="vets-intro">Tened estos contactos a mano por si Greta los necesita. La referencia principal de la comarca del Sobrarbe está en Aínsa, con teléfono de urgencias 24 h, muy útil estando en Broto. Guardad los números en el móvil antes de las rutas, donde la cobertura escasea.</p>
+
+<div class="emergencias">
+  <h3>🚨 Emergencias · números clave</h3>
+  <div class="emergencias-grid">
+    <div class="emerg-item"><span class="lbl">Emergencias (general y montaña)</span><span class="num"><a href="tel:112">112</a></span><span class="sub">Bomberos, rescate de montaña, sanitarias y Guardia Civil</span></div>
+    <div class="emerg-item"><span class="lbl">Urgencias veterinarias</span><span class="num"><a href="tel:+34628141417">628 14 14 17</a></span><span class="sub">Clínica Vet. Sobrarbe (urgencias) · Aínsa</span></div>
+    <div class="emerg-item"><span class="lbl">Guardia Civil</span><span class="num"><a href="tel:062">062</a></span><span class="sub">Incidencias en carretera y montaña</span></div>
+    <div class="emerg-item"><span class="lbl">Info toxicológica (mascotas)</span><span class="num"><a href="tel:+34915620420">91 562 04 20</a></span><span class="sub">Si Greta ingiere algo tóxico</span></div>
+  </div>
+</div>
+
 <div class="vet-grid">
   <div class="vet-card urgencia">
     <h3>Clínica Veterinaria Sobrarbe</h3>
     <div class="dist">Aínsa · a ~50 km de Broto · ⭐ referencia comarcal</div>
     <dl>
       <dt>Dirección</dt><dd>Av. Sudiera, 12 (local 3), 22330 Aínsa</dd>
-      <dt>Cita previa</dt><dd><span class="tel">974 50 06 71</span></dd>
-      <dt>Urgencias</dt><dd><span class="tel">628 14 14 17</span></dd>
+      <dt>Cita previa</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974500671">974 50 06 71</a></span></dd>
+      <dt>Urgencias</dt><dd><span class="tel"><a class="tel-link" href="tel:+34628141417">628 14 14 17</a></span></dd>
       <dt>Horario</dt><dd>Lunes a viernes, 10:00–18:00 h</dd>
     </dl>
     <span class="badge-urg">🚨 Urgencias 24 h</span>
@@ -1103,7 +1130,7 @@ a:hover{text-decoration:underline}
     <div class="dist">Sabiñánigo · a ~50 km de Broto (camino de Jaca)</div>
     <dl>
       <dt>Localidad</dt><dd>Sabiñánigo, 22600 Huesca</dd>
-      <dt>Teléfono</dt><dd><span class="tel">974 48 04 96</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974480496">974 48 04 96</a></span></dd>
       <dt>Nota</dt><dd>Alternativa hacia el oeste si vais por esa zona</dd>
     </dl>
   </div>

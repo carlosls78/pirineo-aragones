@@ -31,6 +31,22 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 section[id], [id]{scroll-margin-top:84px}
+/* ---------- EMERGENCIAS ---------- */
+.emergencias{margin:1.2rem 0 1.8rem;background:linear-gradient(135deg,#7a2d2d,#9a3a3a);border-radius:16px;padding:1.3rem 1.5rem;color:#fdeaea}
+.emergencias h3{font-family:'Fraunces',serif;font-size:1.1rem;color:#fff;font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.9rem}
+.emergencias-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.emerg-item{background:rgba(255,255,255,0.12);border-radius:10px;padding:0.7rem 0.95rem;display:flex;flex-direction:column;gap:0.15rem}
+.emerg-item .lbl{font-size:0.76rem;text-transform:uppercase;letter-spacing:0.06em;opacity:0.85}
+.emerg-item .num{font-size:1.15rem;font-weight:600}
+.emerg-item .num a{color:#fff;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.5)}
+.emerg-item .num a:hover{border-bottom-color:#fff}
+.emerg-item .sub{font-size:0.78rem;opacity:0.85}
+@media(max-width:560px){.emergencias-grid{grid-template-columns:1fr}}
+
+/* ---------- TELÉFONOS CLICABLES ---------- */
+a.tel-link{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}
+a.tel-link:hover{color:var(--ambar);border-bottom-color:var(--ambar)}
+
 body{
   font-family:'Inter',system-ui,sans-serif;
   color:var(--tinta);
@@ -643,7 +659,7 @@ a:hover{text-decoration:underline}
         <li>Setas del valle salteadas, cuando la temporada acompaña</li>
         <li>Postres caseros: cuajada, tartas de elaboración propia</li>
       </ul>
-      <p class="precio">💶 30–40 € por persona · ⚠️ <strong>Reserva imprescindible en julio</strong> (974 375 007 / 657 892 128). Preguntad por mesa en terraza con Greta.</p>
+      <p class="precio">💶 30–40 € por persona · ⚠️ <strong>Reserva imprescindible en julio</strong> (<a class="tel-link" href="tel:+34974375007">974 375 007</a> / <a class="tel-link" href="tel:+34657892128">657 892 128</a>). Preguntad por mesa en terraza con Greta.</p>
       <div class="alt-picnic">
         <div class="sub">🧺 Alternativa picnic en la Selva de Oza</div>
         <p>El área recreativa junto al aparcamiento tiene mesas de madera a la sombra, con el río al lado. El plan más libre para Greta, que come con vosotros sin restricción. Encargad al hotel el almuerzo para llevar: bocadillos de lomo con queso de oveja del valle, tomate aliñado con buen aceite, cerezas de temporada y agua fresca.</p>
@@ -794,7 +810,7 @@ a:hover{text-decoration:underline}
         <li>Verduras de temporada a la brasa de guarnición</li>
         <li>Postres caseros</li>
       </ul>
-      <p class="precio">💶 25–35 € por persona · 📞 974 37 53 13 · Plaza la Virgen, 9, Siresa</p>
+      <p class="precio">💶 25–35 € por persona · 📞 <a class="tel-link" href="tel:+34974375313">974 37 53 13</a> · Plaza la Virgen, 9, Siresa</p>
     </div>
   </div>
 </div>
@@ -873,7 +889,7 @@ a:hover{text-decoration:underline}
     <div class="bloque-body comida-rica">
       <p class="sub">Hotel Usón o un bar de Hecho — vuelta a la base</p>
       <p><span class="tag si">Usón admite perros ✓</span> <span class="tag consultar">Bares de Hecho: consultar 🐾</span></p>
-      <p class="ctx">Tras un día de coche y carretera de curvas, lo mejor es una cena tranquila sin volver a conducir de noche. El Usón es la apuesta segura; si preferís bajar a Hecho, Lo Foratón tiene terraza y admite perros en ella (974 39 49 61).</p>
+      <p class="ctx">Tras un día de coche y carretera de curvas, lo mejor es una cena tranquila sin volver a conducir de noche. El Usón es la apuesta segura; si preferís bajar a Hecho, Lo Foratón tiene terraza y admite perros en ella (<a class="tel-link" href="tel:+34974394961">974 39 49 61</a>).</p>
       <p class="platos-lbl">Sugerencia</p>
       <ul>
         <li>Menú casero del día en el hotel (crema, carne o pescado de montaña, postre)</li>
@@ -988,7 +1004,7 @@ a:hover{text-decoration:underline}
         <li>Bocadillos generosos de panceta o lomo (camping)</li>
         <li>Chuletón con patatas y pimientos, solomillo, cuajada casera (Borda Bisaltico)</li>
       </ul>
-      <p class="precio">💶 Camping 12–18 € · Borda Bisaltico 25–35 € · 📞 Borda Bisaltico 974 34 89 40</p>
+      <p class="precio">💶 Camping 12–18 € · Borda Bisaltico 25–35 € · 📞 Borda Bisaltico <a class="tel-link" href="tel:+34974348940">974 34 89 40</a></p>
       <div class="alt-picnic">
         <div class="sub">🧺 Alternativa cultural + ligera</div>
         <p>Combinad una comida ligera de picnic con la visita corta al Centro de Interpretación del Megalitismo. ⚠️ Para entrar al centro con Greta, consultad; si no, turnaos.</p>
@@ -1008,7 +1024,7 @@ a:hover{text-decoration:underline}
         <li>Civet de jabalí o faisán</li>
         <li>Ternasco asado · postre casero</li>
       </ul>
-      <p class="precio">💶 30–40 € por persona · 📞 974 37 50 07 / 657 892 128 · Plaza la Fuente, 1</p>
+      <p class="precio">💶 30–40 € por persona · 📞 <a class="tel-link" href="tel:+34974375007">974 37 50 07</a> / <a class="tel-link" href="tel:+34657892128">657 892 128</a> · Plaza la Fuente, 1</p>
     </div>
   </div>
 </div>
@@ -1137,19 +1153,19 @@ a:hover{text-decoration:underline}
       <div class="nom">Casa Blasquico / Gaby</div>
       <div class="ubi">Hecho · Plaza la Fuente, 1</div>
       <div class="desc">La mesa de referencia del valle. Civet de jabalí, verduras rellenas, ternasco. Reserva imprescindible.</div>
-      <div class="datos"><span class="tag consultar">Consultar 🐾</span> <span class="tel">📞 974 37 50 07</span></div>
+      <div class="datos"><span class="tag consultar">Consultar 🐾</span> <span class="tel">📞 <a class="tel-link" href="tel:+34974375007">974 37 50 07</a></span></div>
     </div>
     <div class="comer-card">
       <div class="nom">Restaurante Castillo d'Acher</div>
       <div class="ubi">Siresa · Plaza la Virgen, 9</div>
       <div class="desc">Asador con terraza panorámica a 5 km del hotel. Carnes a la brasa del Pirineo.</div>
-      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 37 53 13</span></div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 <a class="tel-link" href="tel:+34974375313">974 37 53 13</a></span></div>
     </div>
     <div class="comer-card">
       <div class="nom">Lo Foratón</div>
       <div class="ubi">Hecho</div>
       <div class="desc">Tapas y platos combinados. Admite perros en su terraza (confirmado en reseñas).</div>
-      <div class="datos"><span class="tag si">Terraza dog-friendly ✓</span> <span class="tel">📞 974 39 49 61</span></div>
+      <div class="datos"><span class="tag si">Terraza dog-friendly ✓</span> <span class="tel">📞 <a class="tel-link" href="tel:+34974394961">974 39 49 61</a></span></div>
     </div>
     <div class="comer-card">
       <div class="nom">Bordas del río Veral</div>
@@ -1161,7 +1177,7 @@ a:hover{text-decoration:underline}
       <div class="nom">Borda Bisaltico</div>
       <div class="ubi">Hecho · ctra. de Gabardito</div>
       <div class="desc">Asador con vistas a la peña Forca. Chuletón, solomillo, cuajada casera.</div>
-      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 974 34 89 40</span></div>
+      <div class="datos"><span class="tag consultar">Terraza, consultar 🐾</span> <span class="tel">📞 <a class="tel-link" href="tel:+34974348940">974 34 89 40</a></span></div>
     </div>
   </div>
   <p style="font-size:0.84rem;color:var(--tinta-suave);margin-top:0.8rem">⚠️ En julio (temporada alta) conviene reservar. Confirmad siempre la política de perros del local al reservar, priorizando terraza.</p>
@@ -1210,13 +1226,24 @@ a:hover{text-decoration:underline}
   <h2>Veterinarios de la zona</h2>
 </div>
 <p class="vets-intro">Por seguridad con Greta, conviene tener localizados estos contactos antes de subir al valle. ⚠️ Importante: en el propio Hecho no hay clínica veterinaria; la referencia más cercana está en Jaca (~50 km). Guardad los teléfonos en el móvil, ya que en el hotel y las rutas la cobertura es limitada.</p>
+
+<div class="emergencias">
+  <h3>🚨 Emergencias · números clave</h3>
+  <div class="emergencias-grid">
+    <div class="emerg-item"><span class="lbl">Emergencias (general y montaña)</span><span class="num"><a href="tel:112">112</a></span><span class="sub">Bomberos, rescate de montaña, sanitarias y Guardia Civil</span></div>
+    <div class="emerg-item"><span class="lbl">Urgencias veterinarias</span><span class="num"><a href="tel:+34974360739">974 36 07 39</a></span><span class="sub">Centro Clínico Vet. Jaca · Jaca, ~50 km</span></div>
+    <div class="emerg-item"><span class="lbl">Guardia Civil</span><span class="num"><a href="tel:062">062</a></span><span class="sub">Incidencias en carretera y montaña</span></div>
+    <div class="emerg-item"><span class="lbl">Info toxicológica (mascotas)</span><span class="num"><a href="tel:+34915620420">91 562 04 20</a></span><span class="sub">Si Greta ingiere algo tóxico</span></div>
+  </div>
+</div>
+
 <div class="vet-grid">
   <div class="vet-card">
     <h3>Centro Clínico Veterinario de Jaca</h3>
     <div class="dist">Jaca · a ~50 km del hotel</div>
     <dl>
       <dt>Dirección</dt><dd>C/ de los Estudios, 5 (bajo), 22700 Jaca</dd>
-      <dt>Teléfono</dt><dd><span class="tel">974 36 07 39</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974360739">974 36 07 39</a></span></dd>
       <dt>Horario</dt><dd>Lunes a viernes, 9:00–18:00 h</dd>
       <dt>Cita</dt><dd>Requiere cita previa</dd>
     </dl>
@@ -1227,7 +1254,7 @@ a:hover{text-decoration:underline}
     <div class="dist">Jaca · a ~50 km del hotel</div>
     <dl>
       <dt>Dirección</dt><dd>Av. de Francia, 55, 22700 Jaca</dd>
-      <dt>Teléfono</dt><dd><span class="tel">974 36 39 79</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974363979">974 36 39 79</a></span></dd>
       <dt>Horario</dt><dd>L–V 10:00–18:00 · Sábado 10:00–13:00</dd>
       <dt>Cita</dt><dd>Recomendable llamar antes</dd>
     </dl>
@@ -1237,7 +1264,7 @@ a:hover{text-decoration:underline}
     <div class="dist">Jaca · a ~50 km del hotel</div>
     <dl>
       <dt>Dirección</dt><dd>C/ Valle de Ansó, 5, 22700 Jaca</dd>
-      <dt>Teléfono</dt><dd><span class="tel">974 35 55 48</span></dd>
+      <dt>Teléfono</dt><dd><span class="tel"><a class="tel-link" href="tel:+34974355548">974 35 55 48</a></span></dd>
       <dt>Horario</dt><dd>L–V 9:00–14:00 y 16:00–19:00</dd>
     </dl>
   </div>
