@@ -136,6 +136,25 @@ a{color:var(--agua);text-decoration:none}
   .destacado,.consejo,.contexto,.comer-card,.visita-card,.consejo-card,.ruta-row,.wikiloc,.ficha,.horario{break-inside:avoid}
   @page{margin:1.5cm}
 }
+
+/* ---------- GLOSARIO Y CHECKLIST (portada) ---------- */
+.extra{padding:3rem 0 0}
+.extra-head{text-align:center;margin-bottom:2rem}
+.extra-head .eyebrow{font-size:0.75rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ambar);font-weight:600}
+.extra-head h2{font-family:'Fraunces',serif;font-size:1.8rem;color:var(--bosque);font-weight:500;margin-top:0.4rem}
+.extra-head p{color:var(--tinta-suave);max-width:620px;margin:0.6rem auto 0}
+.glosario-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.glos-term{background:var(--blanco);border:1px solid var(--linea);border-radius:11px;padding:0.8rem 1.1rem;box-shadow:var(--sombra)}
+.glos-term .palabra{font-family:'Fraunces',serif;font-weight:600;color:var(--bosque);font-size:1rem}
+.glos-term .palabra .reg{font-family:'Inter';font-size:0.72rem;font-weight:500;color:var(--ambar);margin-left:0.4rem;letter-spacing:0.04em}
+.glos-term .def{font-size:0.87rem;color:var(--tinta-suave);margin-top:0.2rem}
+.check-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:0.5rem}
+.check-col{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:1.2rem 1.4rem;box-shadow:var(--sombra)}
+.check-col h3{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--bosque);font-weight:500;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.8rem;padding-bottom:0.5rem;border-bottom:1px solid var(--linea)}
+.check-col ul{list-style:none;display:grid;gap:0.45rem}
+.check-col li{font-size:0.9rem;color:var(--tinta);padding-left:1.6rem;position:relative;line-height:1.45}
+.check-col li::before{content:'☐';position:absolute;left:0;color:var(--bosque-claro);font-size:1.05rem;top:-0.05rem}
+@media(max-width:640px){.glosario-grid,.check-wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -237,6 +256,69 @@ a{color:var(--agua);text-decoration:none}
 </div>
 </section>
 
+<!-- ===================== GLOSARIO ===================== -->
+<section class="extra wrap" id="glosario">
+<div class="extra-head">
+  <span class="eyebrow">Para entender el valle</span>
+  <h2>Pequeño glosario pirenaico</h2>
+  <p>Palabras que oiréis y leeréis por la zona: el aragonés de los valles (cheso, ansotano, patués) sigue muy vivo y salpica carteles, mapas y conversaciones.</p>
+</div>
+<div class="glosario-grid">
+  <div class="glos-term"><div class="palabra">Ibón</div><div class="def">Lago de montaña de origen glaciar, típico de la alta montaña pirenaica.</div></div>
+  <div class="glos-term"><div class="palabra">Borda</div><div class="def">Construcción de piedra de montaña, usada como cuadra o pajar; muchas hoy son refugios o restaurantes.</div></div>
+  <div class="glos-term"><div class="palabra">Forau</div><div class="def">"Agujero" o sumidero. El Forau de Aigualluts es donde el agua del Aneto se sume bajo tierra.</div></div>
+  <div class="glos-term"><div class="palabra">Sarrio</div><div class="def">El rebeco pirenaico, ágil ungulado de las laderas altas. Con suerte lo veréis en Aguas Tuertas o Estós.</div></div>
+  <div class="glos-term"><div class="palabra">Crómlech</div><div class="def">Círculo de piedras prehistórico. La Corona de los Muertos (Oza) reúne más de 120.</div></div>
+  <div class="glos-term"><div class="palabra">Achar / Boca</div><div class="def">Desfiladero o garganta estrecha. La "Boca del Infierno" es el cañón del Aragón Subordán.</div></div>
+  <div class="glos-term"><div class="palabra">Cheso <span class="reg">Hecho</span></div><div class="def">Variedad del aragonés hablada en el Valle de Hecho, una de las mejor conservadas.</div></div>
+  <div class="glos-term"><div class="palabra">Patués <span class="reg">Benasque</span></div><div class="def">El aragonés benasqués, hablado en el valle de Benasque; mezcla rasgos aragoneses y cataláns.</div></div>
+  <div class="glos-term"><div class="palabra">Paúl / Plan</div><div class="def">Zona llana y húmeda de pasto en el fondo de un valle (p. ej. el Plan de Aigualluts).</div></div>
+  <div class="glos-term"><div class="palabra">GR-11</div><div class="def">El Sendero Pirenaico, gran ruta que cruza el Pirineo de mar a mar; lo pisaréis en varias etapas.</div></div>
+  <div class="glos-term"><div class="palabra">Tresmil</div><div class="def">Cima de más de 3.000 m. Benasque concentra la mayor agrupación del Pirineo (Aneto, Posets…).</div></div>
+  <div class="glos-term"><div class="palabra">Mallo</div><div class="def">Peñasco o roca prominente y vertical, frecuente en la toponimia (Mallo Blanco, en Aguas Tuertas).</div></div>
+</div>
+</section>
+
+<!-- ===================== CHECKLIST GRETA ===================== -->
+<section class="extra wrap" id="equipaje">
+<div class="extra-head">
+  <span class="eyebrow">Antes de salir de casa</span>
+  <h2>Checklist de equipaje con Greta</h2>
+  <p>Lo esencial para que el viaje sea cómodo y seguro para los tres. Repasadlo la víspera; en los valles no siempre hay dónde comprar lo que falte.</p>
+</div>
+<div class="check-wrap">
+  <div class="check-col">
+    <h3>🐾 Para Greta</h3>
+    <ul>
+      <li>Correa corta y, si tiene, arnés cómodo de montaña</li>
+      <li>Bozal (por si el bus o algún acceso lo exige)</li>
+      <li>Transportín o bolsa de transporte plegable</li>
+      <li>Manta o toalla para el coche y el alojamiento</li>
+      <li>Comedero y bebedero de viaje plegables</li>
+      <li>Su pienso habitual para 16 días + snacks premio</li>
+      <li>Agua propia para las rutas (no fiar al río)</li>
+      <li>Bolsas para recoger sus deposiciones</li>
+      <li>Cartilla veterinaria y nº de microchip</li>
+      <li>Antiparasitario al día (garrapatas en pastos)</li>
+    </ul>
+  </div>
+  <div class="check-col">
+    <h3>🎒 Botiquín y extras</h3>
+    <ul>
+      <li>Botiquín canino: gasas, suero, pinza de garrapatas, desinfectante</li>
+      <li>Protector de almohadillas (cera) para grava caliente</li>
+      <li>Teléfono del veterinario de cada base (en la guía)</li>
+      <li>Foto reciente de Greta por si se extravía</li>
+      <li>Cepillo y toallitas para barro y abrojos</li>
+      <li>Su juguete o mantita de casa (para que descanse mejor)</li>
+      <li>Linterna o luz LED para el collar (paseos nocturnos)</li>
+      <li>Bolsas de basura para los residuos en ruta</li>
+    </ul>
+  </div>
+</div>
+<p style="font-size:0.84rem;color:var(--tinta-suave);text-align:center;margin-top:1rem;max-width:620px;margin-left:auto;margin-right:auto">💡 Consejo: llevad también una copia digital de la cartilla veterinaria en el móvil, por si hay que acudir a urgencias en el viaje.</p>
+</section>
+
 <!-- ===================== VERIFICAR ===================== -->
 <section class="verificar wrap">
 <div class="verificar-box">
@@ -244,7 +326,7 @@ a{color:var(--agua);text-decoration:none}
   <ul>
     <li>Política de perros de los tres alojamientos (Usón, Casa Rincón de Broto, La Terraceta de Linsoles).</li>
     <li>Reservas de restaurantes en julio (Casa Blasquico en Hecho es imprescindible reservar) y su política con perros.</li>
-    <li>Horarios y tarifa 2026 del autobús lanzadera de Benasque, y confirmación de que admite perros (AVANZA · 638 073 498).</li>
+    <li>Taxi 4×4 para subir a Aigualluts con Greta en el habitáculo: precio y confirmación (Ángel Lledó · 608 930 450).</li>
     <li>Estado y tasa de la pista de Bujaruelo y del acceso a Ordesa para las fechas exactas.</li>
     <li>Veterinario más cercano a cada base (Jaca para Hecho; Sobrarbe para Broto; Benasque para el valle).</li>
   </ul>
